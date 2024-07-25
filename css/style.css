@@ -19,6 +19,9 @@
     height: 200vh;
 }
 /* ================================================ HEADER ======================================================================== */
+.tradingview-widget-container{
+    background-color: var(--bg-color-10);
+}
 .navbar{
     padding: 0.5em;
     display: flex;
@@ -26,7 +29,7 @@
 }
 #navegacao{
     width: 80%;
-    margin-right: 3rem;
+    margin-right: 7.2rem;
 }
 #container-fluid a{
     margin-right: 3em;
@@ -37,8 +40,8 @@
     margin-left: 1.8rem;
 }
 /* ================================================= MAIN ========================================================================== */
-main{
-    height: 160vh;
+#home{
+    height: 165vh;
     background-image: url(../imagens/buildings.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,26 +49,49 @@ main{
     
 }
 .container{
-    border-bottom: 2px solid black;
-    padding: 1em;
+    border-top: 1px solid var(--bg-color-0);
+    border-bottom: 1px solid var(--bg-color-0);
+    padding: 2rem;
+}
+#home h1{
+    margin-left: 3em;
 }
 #cards{
-    height: 50%;
+    height: 25%;
+}
+.card-group{
+    height: 5rem;
 }
 #slider{
     height: 70%;
-    width: 100%;
-    margin-top: 3.5em;
+    width: 68%;
+    border-radius: 0.5rem;
+    
 }
 #slider img{
     height: 400px;
     width: 300px;
 }
+#top{
+    display: flex;
+    flex-direction: row;
+}
+.stocks{
+    border: 2px solid var(--bg-color-0);
+    width: 25%;
+}
+#crypto{
+    height: 160vh;
+    background-image: url(../imagens/Crypto_wallpaper.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFF;
+}
 #chart{
     height: 40em;
     width: 65em;
 }
-
+/* ===================================================== FOOTER ======================================================================= */
 #footer{
     width: 100%;
     background-color: var(--bg-color-0);
@@ -135,7 +161,11 @@ footer-subscribe{
 footer-subscribe p{
     color: var(--bg-color-30);
 }
+footer #logo{
+    margin-left: 2.77rem;
+}
 #input-group{
+    height: 2rem;
     display: flex;
     align-items: center;
     background-color: var(--bg-color-0);
@@ -155,6 +185,9 @@ footer-subscribe p{
     height: 100%;
     border-radius: 0px 4px 4px 0px;
     cursor: pointer;
+}
+#email{
+    
 }
 #input-group button:hover{
     opacity: 0.7;

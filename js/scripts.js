@@ -37,7 +37,7 @@ showSlide(currentIndex);
     
 
 
-  (   {
+  ({
     "symbols": [
       {
         "description": "",
@@ -134,7 +134,8 @@ showSlide(currentIndex);
     "colorTheme": "dark",
     "locale": "br"
   });             
-                
+         
+  
                 
 
                
