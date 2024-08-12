@@ -1,141 +1,128 @@
-const TOTAL_SLIDES = 3;
-let currentIndex = 0;
+window.onload = function () {
 
-const dots = document.querySelectorAll(".dots button");
-const images = document.querySelectorAll(".images img");
-
-function showSlide(index){
-    images.forEach(image => image.style.display =
-        "none");
-        dots.forEach(dot => dot.style.backgroundColor = 
-        "transparent");
-
-        images[index].style.display = "block";
-        dots[index].style.backgroundColor = "#000";
+    const paginas = document.querySelectorAll(".alteraPagina") //seleciona todas as classes .alteraPagina
+    paginas.forEach(pagina => {     // para cada página...
+    pagina.addEventListener("click", trocaPagina) // para cada .alteraPagina  acontece o evento click, então chama trocaPagina
+    });
 }
 
-function gotoSlide(index){
-    currentIndex = (TOTAL_SLIDES + index) % TOTAL_SLIDES;
-    showSlide(currentIndex);
+function trocaPagina(event) {
+    event.preventDefault()
+
+     let pagina=event.target.href
+     fetch(pagina)
+
+
+      .then(function(response){
+        if(response.ok)
+            return response.text()
+
+    })
+    .then(function(dados){
+
+              if(dados) {
+                     var x = document.getElementById("carrega")
+                     var conteudo = dados
+                     var x2 = document.getElementById("carrega2")
+                     x2.innerHTML = ''
+                     if(conteudo) {
+                       x.innerHTML = conteudo
+                       var cadastro = document.getElementById("formCadastro")
+                       cadastro.addEventListener("submit", crudUsuario)
+             }
+         }
+
+
+     })     
+    .catch(function(e) {
+        console.log(e)
+    })
+
+}
+function crudUsuario(event) {
+    event.preventDefault()
+    let formulario=event.target
+    let formData = new FormData(formulario);
+    const options = { method:'POST',
+                      mode:'cors',
+                      body: formData,
+                      cache:'default'}
+
+     let pagina="includes/controle.php"
+
+     fetch(pagina,options)
+
+    .then(function(response){
+        if(response.ok)
+            return response.text()
+
+    })
+    .then(function(dados){
+
+              if(dados) {
+                var x = document.getElementById("carrega")
+                var conteudo = dados
+
+                if(conteudo) {
+                    x.innerHTML = conteudo
+                    }
+                }
+
+
+     })     
+    .catch(function(e) {
+        console.log(e)
+    })
 }
 
-function next(){
-    gotoSlide(currentIndex + 1);
+
+function pesquisaUsuarios(event) {
+    let formulario=document.getElementById("formulario")
+    let formData = new FormData(formulario);
+    const options = { method:'POST',
+                      mode:'cors',
+                      body: formData,
+                      cache:'default'}
+
+     let pagina="includes/controle.php"
+     fetch(pagina,options)
+
+
+      .then(function(response){
+        if(response.ok)
+            return response.text()
+
+    })
+    .then(function(dados){
+              var x = document.getElementById("carrega2")
+              if(dados) {
+                         var conteudo = dados
+
+                    if(conteudo) {
+                        x.innerHTML = conteudo
+                    }
+                }
+
+
+     })     
+    .catch(function(e) {
+        console.log(e)
+    })
+
 }
-function prev(){
-    gotoSlide(currentIndex -1);
+function confirma_excluir()
+{
+    resp=confirm("Confirma Exclusão?")
+
+    if (resp==true)
+    {
+
+        return true;
+    }
+    else
+    {
+        return false;
+
+    }
+
 }
-function dotClicked(index){
-    gotoSlide(index);
-}
-dots.forEach((dot, index)=>{
-    dot.addEventListener("click", () => dotClicked
-    (index));
-});
-showSlide(currentIndex);
-
-    
-
-
-  ({
-    "symbols": [
-      {
-        "description": "",
-        "proName": "BINANCE:BTCUSDT"
-      },
-      {
-        "description": "",
-        "proName": "BINANCE:ETHUSDT"
-      },
-      {
-        "description": "",
-        "proName": "BINANCE:SOLUSDT"
-      },
-      {
-        "description": "",
-        "proName": "BMFBOVESPA:VALE3"
-      },
-      {
-        "description": "",
-        "proName": "BMFBOVESPA:PETR4"
-      },
-      {
-        "description": "",
-        "proName": "BMFBOVESPA:WEGE3"
-      },
-      {
-        "description": "",
-        "proName": "BMFBOVESPA:BBAS3"
-      },
-      {
-        "description": "",
-        "proName": "BMFBOVESPA:ITUB4"
-      },
-      {
-        "description": "",
-        "proName": "BMFBOVESPA:ABEV3"
-      },
-      {
-        "description": "",
-        "proName": "BMFBOVESPA:IBOV"
-      },
-      {
-        "description": "",
-        "proName": "NASDAQ:NVDA"
-      },
-      {
-        "description": "",
-        "proName": "NASDAQ:META"
-      },
-      {
-        "description": "",
-        "proName": "NASDAQ:AMD"
-      },
-      {
-        "description": "",
-        "proName": "NASDAQ:COIN"
-      },
-      {
-        "description": "",
-        "proName": "NASDAQ:GOOGL"
-      },
-      {
-        "description": "",
-        "proName": "NYSE:BABA"
-      },
-      {
-        "description": "",
-        "proName": "NYSE:NKE"
-      },
-      {
-        "description": "",
-        "proName": "NYSE:XOM"
-      },
-      {
-        "description": "",
-        "proName": "BINANCE:ADAUSDT"
-      },
-      {
-        "description": "",
-        "proName": "BINANCE:BNBUSDT"
-      },
-      {
-        "description": "",
-        "proName": "BINANCE:NEARUSDT"
-      },
-      {
-        "description": "",
-        "proName": "BINANCE:UNIUSDT"
-      }
-    ],
-    "showSymbolLogo": true,
-    "isTransparent": false,
-    "displayMode": "adaptive",
-    "colorTheme": "dark",
-    "locale": "br"
-  });             
-         
-  
-                
-
-               
