@@ -48,7 +48,7 @@ function crudUsuario(event) {
                       body: formData,
                       cache:'default'}
 
-     let pagina="includes/controle.php"
+     let pagina="includes/logica/controller.php"
 
      fetch(pagina,options)
 
@@ -84,7 +84,7 @@ function pesquisaUsuarios(event) {
                       body: formData,
                       cache:'default'}
 
-     let pagina="includes/controle.php"
+     let pagina="includes/logica/controller.php"
      fetch(pagina,options)
 
 

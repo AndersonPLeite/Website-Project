@@ -1,14 +1,14 @@
 <?php
  include_once('includes/componentes/cabecalho.php');
 ?>
-    <link rel="stylesheet" href="assets/css/index.css">
-    <title>Cadastrar Usuário</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Abra sua conta</title>
 </head>
 <body>
 <?php require('includes/componentes/header.php') ?>
 <main>
     <section>
-    <form action="includes/logica/logica_pessoa.php" method="post">
+    <form action="includes/logica/controller.php" method="post">
       <p><label for="nome">Nome: </label><input type="text" name="nome" id="nome"></p>
       <p><label for="email">email: </label><input type="text" name="email" id="email"></p>
       <p><label for="cpf">CPF: </label><input type="text" name="cpf" id="cpf"></p>
@@ -18,5 +18,6 @@
     <a href="login.php">Login</a>
     </section>
 </main>
+<script  type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>

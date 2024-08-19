@@ -213,3 +213,51 @@ footer #logo{
         padding: 3rem 2rem;
     }
 }
+
+/* ================================= Biblioteca ================================================================= */
+
+.bbtc{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color-0);
+    color: #fff;
+    border-radius: 5px;
+    height: 70%;
+    width: 100%;
+}
+.bbtc h1, h3{
+    margin: 2rem 0 0 7rem;
+}
+#menubbtc{
+    display: flex;
+    flex-direction: row;
+}
+.form-check{
+    margin: 2.5rem 0 0 1rem;
+}
+#livros{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #2B3035;
+    width: 85%;
+    height: 45rem;
+    border-radius: 1rem;
+    margin: 3rem 3rem 3rem 7rem;
+}
+#imgLivro{
+    margin: 3rem 0 2rem 2rem;
+}
+#imgLivro{
+    height: 16rem;
+    width: 12rem;
+}
+#imgLivro2{
+    height: 14rem;
+    width: 15rem;
+}
+#imgLivro3{
+    height: 14rem;
+    width: 15rem;
+    margin: 4rem 0 2rem 2rem;
+}
