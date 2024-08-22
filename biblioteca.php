@@ -1,15 +1,15 @@
 <?php
-
+   /*if(isset($_SESSION['msg']))
+   { 
+     echo $_SESSION['msg'];
+     unset($_SESSION['msg']);
+   }
     if(!isset($_SESSION['logado']))
     {
        header('location:login.php');
     
     }
-    if(isset($_SESSION['msg']))
-    { 
-      echo $_SESSION['msg'];
-      unset($_SESSION['msg']);
-    }
+    */
     require('includes/logica/conecta.php');
     require('includes/componentes/cabecalho.php');
 ?>
@@ -33,6 +33,11 @@
                       E-books
                     </label>
                   </div>
+                  <form method="post" action="buscar.php">
+                    <label for="search">Pesquisar:</label>
+                    <input type="text" id="search" name="search" placeholder="Pesquisar">
+                    <input type="submit" value="Buscar">
+                  </form>
             </section>
         </div>
         <div>
@@ -65,5 +70,5 @@
             </section>
         </div>
     </main>
-  </main> 
+    <script type="text/javascript" src="js/scripts.js"></script>
 </body>

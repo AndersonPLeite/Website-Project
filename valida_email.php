@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('includes/logica/funcoes_pessoa.php');
+include_once('includes/logica/functions.php');
 include_once('includes/logica/conecta.php');
 if($_GET['h']){
 	$h=$_GET['h'];

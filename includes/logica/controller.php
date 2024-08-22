@@ -21,7 +21,7 @@
         if($retorno)
         {
                $hash=md5($email);
-               $link="<a href='localhost/bc/valida_email.php?h=".$hash."'> Clique aqui para confirmar seu cadastro </a>";
+               $link="<a href='localhost/Website-Project/valida_email.php?h=".$hash."'> Clique aqui para confirmar seu cadastro </a>";
               $mensagem="<tr><td style='padding: 10px 0 10px 0;' align='center' bgcolor='#669999'>";
         
                $mensagem.="Email de Confirmação <br>".$link."</td></tr>";

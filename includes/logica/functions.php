@@ -125,7 +125,6 @@
     }
 
 function pesquisarPessoaEmail($conexao,$array){
-
     
         try {
 

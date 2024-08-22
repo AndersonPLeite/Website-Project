@@ -30,7 +30,7 @@
                         </ul>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="login.php">Sair</a>
+                        <a class="nav-link active" name="sair" aria-current="page" href="login.php">Sair</a>
                       </li>
                     </ul>
                     <form class="d-flex" role="search">
