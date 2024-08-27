@@ -1,3 +1,6 @@
+<?php
+  include_once('includes/logica/functions.php');
+?>
 <header>
       <div>
         <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">

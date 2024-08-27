@@ -78,6 +78,20 @@
   //      die();
         header('location:../../login.php');
     }
+#CADASTRAR ADMINISTRADOR
+if(isset($_POST['cadastrarAdm'])){
+    if(isset($_FILES["imagemAdm"]) && !empty($_FILES["imagemAdm"]))
+        {
+        move_uploaded_file($_FILES["imagemAdm"]["tmp_name"], "../../imagens/".$_FILES["imagemAdm"]["name"]);
+        echo "update realizado com sucesso";
+        }
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+    $foto_perfil = $_FILES["imagemAdm"]["name"];
+    $array = array($nome, $email, $senha,1,$foto_perfil);
+    $retorno= inserirAdm($conexao, $array);
+}
 #ENTRAR
     if(isset($_POST['entrar'])){
         $email = $_POST['email'];
@@ -93,6 +107,23 @@
         else{
             $_SESSION['msg']="Usuário Inválido";
             header('location:../../login.php');
+        }
+    }
+# ENTRAR ADMINISTRADOR
+    if(isset($_POST['entrarAdm'])){
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+        $array = array($email);
+        $adm = acessarAdm($conexao,$array,$senha);
+        if($adm){
+            $_SESSION['logado'] = true;
+            $_SESSION['id'] = $adm['id'];
+            $_SESSION['nome'] = $adm['nome'];
+            header('location:../../painelAdmin.php');
+        }
+        else{
+            $_SESSION['msg']="Você não tem acesso permitido nessa página";
+            header('location:../../loginAdm.php');
         }
     }
 #SAIR
@@ -283,31 +314,54 @@ $assunto="Promoção do dia";
         header('location:../../login.php');
         
 }
-session_start();
+/*session_start();
 //identificação para a chamada da classe
 require_once('conecta.php');
 require_once('funcoes_produto.php');
+*/
 
+#CADASTRAR CATEGORIA
+if(isset($_POST['Cadastro'])){
+    $nome = $_POST['cat'];
+    try {
+    $stmt = $conexao->prepare("SELECT * FROM categorias WHERE nome LIKE :nome");
+    $stmt->bindParam(":nome",$nome);
+    $stmt->execute();
+    $resultado = $stmt->fetchAll();
+    if(count($resultado) == 0) {
+    $inserir = $conexao->prepare("INSERT INTO categorias (nome) VALUES (:nome)");
+    $inserir->bindParam(":nome",$nome);
+    if($inserir->execute() == 1) {
+        $_SESSION["msgCategoria"]= "Categoria inserida!";
+    } } else { $_SESSION["msgCategoria"] = "Já existe!";
+    }
+    header('location:../../painelAdmin.php');
+
+    } catch(PDOException $e) {
+    echo "Erro: " . $e->getMessage();
+    }
+}
 #CADASTRO PRODUTO
-if(isset($_POST['cadastrar'])){
+if(isset($_POST['cadastrarProd'])){
     if(isset($_FILES["imagem"]) && !empty($_FILES["imagem"]))
         {
-        move_uploaded_file($_FILES["imagem"]["tmp_name"], "./img/".$_FILES["imagem"]["name"]);
+        move_uploaded_file($_FILES["imagem"]["tmp_name"], "../../imagens/".$_FILES["imagem"]["name"]);
         echo "update realizado com sucesso";
         }
     $nome = $_POST['nome'];
     $descricao = $_POST['descricao'];
     $quantidade = $_POST['quantidade'];
-    $imagem = $_POST['imagem'];
-    $array = array($nome, $descricao,$quantidade,$imagem);
+    $idcategoria = $_POST['idcategoria'];
+    $imagem = $_FILES["imagem"]["name"];
+    $array = array($nome, $descricao,$quantidade,$idcategoria,$imagem);
     $retorno= inserirProduto($conexao, $array);
     if($retorno){
-        $_SESSION["msg"]= "Produto cadastrado com sucesso";
+        $_SESSION["msgLivro"]= "Produto cadastrado com sucesso";
 
-        header('location:painelAdmin.php');
+       header('location:../../painelAdmin.php');
     }else{
-        $_SESSION["msg"]= "Erro ao cadastrar produto";
-        header('location:../../cadastrarProduto.php');
+        $_SESSION["msgLivro"]= "Erro ao cadastrar produto";
+       header('location:../../painelAdmin.php');
     }
 }
 #EDITAR PRODUTO

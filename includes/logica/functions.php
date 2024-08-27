@@ -12,6 +12,18 @@
         }
 
     }
+    function inserirAdm($conexao,$array){
+       try {
+            $query = $conexao->prepare("insert into administradores (nome, email, senha,status, foto_perfil) values (?, ?, ?, ?, ?)");
+
+            $resultado = $query->execute($array);
+            
+            return $resultado;
+        }catch(PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+    }
 
 
     function alterarPessoa($conexao, $array){
@@ -75,11 +87,6 @@
             echo 'Error: ' . $e->getMessage();
       }  
     }
-
-    function acessarAdmin(){
-
-    }
-
     function acessarPessoa($conexao,$array,$senha_form){
         try {
         $query = $conexao->prepare("select * from pessoa where email=? and status=true");
@@ -100,6 +107,24 @@
          }catch(PDOException $e) {
             echo 'Error: ' . $e->getMessage();
       }  
+    }
+    function acessarAdm($conexao,$array,$senha_form){
+    
+        $query = $conexao->prepare("select * from administradores where email=? and status=true");
+        if($query->execute($array)){
+            $administrador = $query->fetch(); //coloca os dados num array $pessoa
+        if(password_verify($senha_form, $administrador['senha']))
+            { 
+                return $administrador;
+            }
+        else
+            {
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
     }
 
  function pesquisarPessoa($conexao,$array){
@@ -239,10 +264,10 @@ function pesquisarPessoaEmail($conexao,$array){
     }
     function inserirProduto($conexao,$array){
         try {
-             $query = $conexao->prepare("insert into produtos(nome, descricao, quantidade, imagem) values (?, ?, ?)");
+             $query = $conexao->prepare("insert into produtos(nome, descricao, quantidade,idcategoria, imagem) values (?, ?, ?, ?, ?)");
  
              $resultado = $query->execute($array);
-             
+             var_dump($resultado);
              return $resultado;
          }catch(PDOException $e) {
              echo 'Error: ' . $e->getMessage();
