@@ -123,4 +123,4 @@
         </script>
       </div>
     </header>
-    
+    <script type="text/javascript" src="js/scripts.js"></script>

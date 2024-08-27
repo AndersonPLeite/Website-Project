@@ -290,15 +290,21 @@ require_once('funcoes_produto.php');
 
 #CADASTRO PRODUTO
 if(isset($_POST['cadastrar'])){
+    if(isset($_FILES["imagem"]) && !empty($_FILES["imagem"]))
+        {
+        move_uploaded_file($_FILES["imagem"]["tmp_name"], "./img/".$_FILES["imagem"]["name"]);
+        echo "update realizado com sucesso";
+        }
     $nome = $_POST['nome'];
     $descricao = $_POST['descricao'];
     $quantidade = $_POST['quantidade'];
-    $array = array($nome, $descricao,$quantidade);
+    $imagem = $_POST['imagem'];
+    $array = array($nome, $descricao,$quantidade,$imagem);
     $retorno= inserirProduto($conexao, $array);
     if($retorno){
         $_SESSION["msg"]= "Produto cadastrado com sucesso";
 
-        header('location:../../listarProduto.php');
+        header('location:painelAdmin.php');
     }else{
         $_SESSION["msg"]= "Erro ao cadastrar produto";
         header('location:../../cadastrarProduto.php');

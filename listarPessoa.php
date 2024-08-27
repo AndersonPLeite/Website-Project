@@ -1,6 +1,6 @@
 <?php
 include_once('includes/componentes/cabecalho.php');
-include_once('includes/logica/funcoes_pessoa.php');
+include_once('includes/logica/functions.php');
 include_once('includes/logica/conecta.php');
 session_start();
 if(!isset($_SESSION['logado']))
@@ -9,7 +9,6 @@ if(!isset($_SESSION['logado']))
     
 }
 ?>
-    <link rel="stylesheet" href="assets/css/listarUsuarios.css">
     <title>Bolsacripto</title>
 </head>
 <body>
@@ -32,13 +31,13 @@ if(!isset($_SESSION['logado']))
                 <section>
                     <p>Nome: <?php echo $usuario['nome']; ?></p>
                     <p>Email <?php echo $usuario['email']; ?></p>
-                                    
+                    <p>Imagem: <img src="imagens/<?php echo $usuario['imagem'];?>" width='100px' height='100px'/></p>            
                     
                 </section>
             <?php
         }
     ?>
+   
 </main>
-<?php require('includes/componentes/footer.php');?>
 </body>
 </html>

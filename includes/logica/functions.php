@@ -239,7 +239,7 @@ function pesquisarPessoaEmail($conexao,$array){
     }
     function inserirProduto($conexao,$array){
         try {
-             $query = $conexao->prepare("insert into produto (nome, descricao, quantidade) values (?, ?, ?)");
+             $query = $conexao->prepare("insert into produtos(nome, descricao, quantidade, imagem) values (?, ?, ?)");
  
              $resultado = $query->execute($array);
              
