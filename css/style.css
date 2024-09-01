@@ -3,10 +3,13 @@
 
 :root {
     --bg-color-0: #16181b;
+    --bg-color-7: #131722;
     --bg-color-10: #2B3035;
     --bg-color-30: #a8a29e;
     --bg-color-40: #f7f1f1;
+    --bg-color-73: #0b0d14;
     --bg-color-77:#7f37c9;
+    --bg-color-71:#198754;
 }
 *{
     margin: 0;
@@ -20,19 +23,37 @@
 }
 /* ================================================ HEADER ======================================================================== */
 .tradingview-widget-container{
-    background-color: var(--bg-color-10);
+    background-color: var(--bg-color-73);
 }
 .navbar{
     padding: 0.5em;
     display: flex;
-    
+    background-color: var(--bg-color-73);
+}
+.navbar a{
+    color: var(--bg-color-40);
+}
+.nav-item a:hover{
+    color: var(--bg-color-71);
 }
 #navegacao{
     width: 80%;
     margin-right: 7.2rem;
+    background-color: var(--bg-color-7);
+    color: var(--bg-color-40);
 }
 #container-fluid a{
     margin-right: 3em;
+    color: var(--bg-color-40);
+}
+#container-fluid a:hover{
+    color: var(--bg-color-71);
+}
+.dropdown-menu{
+    background-color: var(--bg-color-7);
+}
+.dropdown-menu a:hover{
+    background-color: var(--bg-color-7);
 }
 #logo{
     height: 100px;
@@ -50,7 +71,7 @@
 }
 .container{
     border-top: 1px solid var(--bg-color-0);
-    border-bottom: 1px solid var(--bg-color-0);
+    border-bottom: 1px solid var(--bg-color-40);
     padding: 2rem;
 }
 #home h1{
@@ -85,28 +106,60 @@
 #futures{
     border-radius: 5rem;
 }
+/*====================================================== cryptos =========================================================================*/
 #crypto{
-    height: 160vh;
-    background-image: url(../imagens/Crypto_wallpaper.jpeg);
+    height: 350vh;
+    /*background-image: url(../imagens/Crypto_wallpaper.jpeg);*/
+    background-color:var(--bg-color-73);
     background-repeat: no-repeat;
     background-size: cover;
     color: #FFF;
 }
+
 #chart{
-    height: 40em;
+    height: 20%;
     width: 65em;
+    margin-top: 6rem;
+    margin-left: 28rem;
+    margin-bottom: 4rem;
 }
+#chart2{
+    height: 25%;
+    width: 100%;
+    padding: 4rem;
+    margin-top: 6rem;
+    margin-left: 24rem;
+    margin-bottom: 4rem;
+}
+#iframe{
+    display: flex;
+    align-items: center;
+    height: 50rem;
+   
+}
+#aside{
+    height: 550px;
+    width: 24rem;
+    margin-left: 5rem;
+    background-color: var(--bg-color-7);
+    border-color: 1px solid var(--bg-color-40);
+    border-radius: 1rem;
+}
+#video{
+    
+}
+
 /* ===================================================== FOOTER ======================================================================= */
 #footer{
     width: 100%;
-    background-color: var(--bg-color-0);
+    background-color: var(--bg-color-7);
     color: var(--bg-color-40);
 }
 .footer-link{
     text-decoration: none;
 }
 #footer-content{
-    background-color: var(--bg-color-10);
+    background-color: var(--bg-color-7);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 3.5rem;
@@ -132,6 +185,7 @@
 }
 #footer-media .footer-link i{
     font-size: 1.25rem;
+    color: var(--bg-color-40);
 }
 #footer-media .footer-link:hover{
     opacity: 0.7;
@@ -152,11 +206,11 @@
     list-style: none;
 }
 .footer-list .footer-link{
-    color: var(--bg-color-30);
+    color: var(--bg-color-40);
     transition: all 0.4ms;
 }
 .footer-list .footer-link:hover{
-    color: var(--bg-color-77);
+    color: var(--bg-color-71);
 }
 footer-subscribe{
     display: flex;
@@ -173,7 +227,7 @@ footer #logo{
     height: 2rem;
     display: flex;
     align-items: center;
-    background-color: var(--bg-color-0);
+    background-color: var(--bg-color-40);
     border-radius: 4px;
 }
 #input-group input{
@@ -200,11 +254,14 @@ footer #logo{
 #footer-copyright{
     display: flex;
     justify-content: center;
-    background-color: var(--bg-color-0);
+    background-color: var(--bg-color-73);
     color: var(--bg-color-40);
     font-size: 0.9rem;
     padding: 1.5rem;
     font-weight: 100;
+}
+#footer-copyright p{
+    color: var(--bg-color-40);
 }
 @media screen and (max-width: 768px) {
     #footer-content{

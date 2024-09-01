@@ -1,11 +1,12 @@
 <?php
   include_once('includes/logica/functions.php');
+  include_once('includes/componentes/cabecalho.php');
 ?>
 <header>
       <div>
-        <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <nav class="navbar border-bottom border-body" >
           <img src="imagens/logo-BC-rmvBG.png" alt="logo-bolsacripto" id="logo">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navegacao">
+            <nav class="navbar navbar-expand-lg " id="navegacao">
               
                 <div class="container-fluid" id="container-fluid">
                     
@@ -16,7 +17,7 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Ibovespa</a>
+                        <a class="nav-link" aria-current="page" href="#">Ibovespa</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#">Cotações</a>
@@ -33,7 +34,7 @@
                         </ul>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" name="sair" aria-current="page" href="login.php">Sair</a>
+                        <a class="nav-link" name="sair" aria-current="page" href="login.php">Sair</a>
                       </li>
                     </ul>
                     <form class="d-flex" role="search">
