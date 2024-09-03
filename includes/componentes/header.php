@@ -3,9 +3,9 @@
   include_once('includes/componentes/cabecalho.php');
 ?>
 <header>
-      <div>
-        <nav class="navbar border-bottom border-body" >
-          <a class="alteraPagina" href="homeNoticias.php"><img src="imagens/logo-BC-rmvBG.png" alt="logo-bolsacripto" id="logo"></a>
+      <div class="container-fluid">
+        <nav class="navbar border-bottom border-body container-fuid">
+          <img src="imagens/logo-BC-rmvBG.png" alt="logo-bolsacripto" id="logo"></a>
             <nav class="navbar navbar-expand-lg " id="navegacao">
               
                 <div class="container-fluid" id="container-fluid">

@@ -277,7 +277,7 @@ function pesquisarPessoaEmail($conexao,$array){
  
      function listarProduto($conexao){
          try {
-           $query = $conexao->prepare("SELECT * FROM produto");      
+           $query = $conexao->prepare("SELECT * FROM produtos");      
            $query->execute();
            $produtos = $query->fetchAll();
            return $produtos;

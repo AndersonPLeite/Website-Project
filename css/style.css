@@ -26,6 +26,7 @@
 }
  body{
     background-color: var(--bg-color-73);
+    height: 150vh;
  }
  h1{
     color: var(--bg-color-40);
@@ -46,14 +47,14 @@
     color: var(--bg-color-40);
     font-size: 1rem;
     font-weight: bold;
-    margin-left: 1.7rem;
+    margin-left: 1rem;
 }
 .nav-item a:hover{
     color: var(--bg-color-71);
 }
 #navegacao{
     width: 70%;
-    margin-right: 18rem;
+    margin-right: 17rem;
     background-color: var(--bg-color-7);
     color: var(--bg-color-40);
 }
@@ -147,7 +148,7 @@
     width: 100%;
     margin: auto;
     border-radius: 10px;
-    z-index: 1;
+    z-index: 2;
 }
 #iframe{
     display: flex;
@@ -171,7 +172,7 @@
     text-decoration: none;
 }
 #footer-content{
-    background-color: var(--bg-color-7);
+    background-image: linear-gradient(to bottom,var(--bg-color-7),var(--bg-color-10));
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 3.5rem;
@@ -348,17 +349,61 @@ section{
 
 .download{
     height: 600px;
-    width: 450px;
-    margin: auto;
-    margin-top: 5rem ;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    background-image: linear-gradient(to bottom,var(--bg-color-10),var(--bg-color-30),var(--bg-color-40));
+    background-image: linear-gradient(to bottom,var(--bg-color-7),var(--bg-color-10));
     border-radius: 0.8rem;
 }
 
-.download h1{
-    color: var(--gradient);
-    font-size: 3rem;
+.download h2{
+    color: var(--bg-color-40);
+    font-size: 2rem;
     font-weight: bold;
+   
     
+}
+.ebook{
+    width: 40%;
+    margin-bottom: 7rem;
+}
+.ebook h1{
+    margin-top: 9rem;
+    margin-left: 12rem;
+    color: var(--bg-color-40);
+} 
+.descricao h2, p{
+    color: var(--bg-color-40);
+    width: 60%;
+}
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.imgEbooks{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+
+}
+.imgEbooks:hover .sliderLivros{
+    animation-play-state: paused;
+}
+.sliderLivros{
+    height: 30rem;
+    width: 100%;
+    padding: 100px 0 ;
+    background-image: linear-gradient(to top,var(--bg-color-7),var(--bg-color-10));
+    display:inline-block;
+    animation: 25s slide infinite linear;
+}
+.sliderLivros img{
+    height: 180px;
+    margin: 0 40px;
 }

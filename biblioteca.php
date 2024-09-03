@@ -46,11 +46,11 @@
             <section id="livros">
                   <div>
                       <img src="imagens/oIIntli.png" alt="O investidor Inteligente" id="imgLivro3">
-                      <button type="button" class="btn btn-primary" id="imgLivro3"><a class="alteraPagina" href="downloadEbook.php">Ver livro</a></button>
+                      <button type="button" class="btn btn-success" id="imgLivro3"><a class="alteraPagina" href="downloadEbook.php">Ver livro</a></button>
                   </div>
                   <div>
                       <img src="imagens/oIIntli.png" alt="O investidor Inteligente" id="imgLivro3">
-                      <button type="button" class="btn btn-primary" id="imgLivro3"><a class="alteraPagina" href="downloadEbook.php">Ver livro</a></button>
+                      <button type="button" class="btn btn-success" id="imgLivro3"><a class="alteraPagina" href="downloadEbook.php">Ver livro</a></button>
                   </div>
             </section>
         </div>
