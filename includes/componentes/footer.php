@@ -64,3 +64,4 @@
         <p>&#169 2024 All rights reserved</p>
       </div>
     </footer>
+    <script type="text/javascript" src="js/scripts.js"></script>

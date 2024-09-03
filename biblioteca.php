@@ -33,42 +33,28 @@
                       E-books
                     </label>
                   </div>
-                  <form method="post" action="buscar.php">
-                    <label for="search">Pesquisar:</label>
-                    <input type="text" id="search" name="search" placeholder="Pesquisar">
-                    <input type="submit" value="Buscar">
-                  </form>
+                  <div>
+                    <form method="post" action="buscar.php" class="d-flexB" role="search">
+                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Pesquisar">
+                          <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                    </form>
+                  </div>
+                  
             </section>
         </div>
         <div>
             <section id="livros">
-                <div>
-                   <img src="imagens/modelo_Capa-3D_BITCOIM.png" alt="o padrão bitcoin" id="imgLivro">
-                   <button type="button" class="btn btn-primary">Ver livro</button> 
-                </div>
-                <div>
-                    <img src="imagens/modelo_Capa-3D_BITCOIM.png" alt="A filosofia do bitcoin" id="imgLivro">
-                    <button type="button" class="btn btn-primary">Ver livro</button>
-                </div>
-                <div>
-                  <img src="imagens/oIIntli.png" alt="O investidor Inteligente" id="imgLivro3">
-                  <button type="button" class="btn btn-primary">Ver livro</button>
-
-                </div>
-                <div>
-                  <img src="imagens/oIIntli.png" alt="Investindo em ações no longo prazo" id="imgLivro2">
-                  <button type="button" class="btn btn-primary">Ver livro</button>
-                </div>
-                <div>
-                  <img src="imagens/oIIntli.png" alt="O investidor Inteligente" id="imgLivro2">
-                  <button type="button" class="btn btn-primary">Ver livro</button>
-                </div>
-                <div>
-                  <img src="imagens/oIIntli.png" alt="O investidor Inteligente" id="imgLivro2">
-                  <button type="button" class="btn btn-primary">Ver livro</button>
-                </div>
+                  <div>
+                      <img src="imagens/oIIntli.png" alt="O investidor Inteligente" id="imgLivro3">
+                      <button type="button" class="btn btn-primary" id="imgLivro3"><a class="alteraPagina" href="downloadEbook.php">Ver livro</a></button>
+                  </div>
+                  <div>
+                      <img src="imagens/oIIntli.png" alt="O investidor Inteligente" id="imgLivro3">
+                      <button type="button" class="btn btn-primary" id="imgLivro3"><a class="alteraPagina" href="downloadEbook.php">Ver livro</a></button>
+                  </div>
             </section>
         </div>
     </main>
+
     <script type="text/javascript" src="js/scripts.js"></script>
 </body>

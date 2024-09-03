@@ -110,6 +110,58 @@ function pesquisaUsuarios(event) {
     })
 
 }
+
+const config = {
+    
+};
+function createConfig(){
+    return  config
+}
+
+const widgetConfig = {
+  "autosize": true,
+  "symbol": "BINANCE:BTCUSDT",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "br",
+  "allow_symbol_change": true,
+  "watchlist": [
+    "BITSTAMP:BTCUSD",
+    "BINANCE:ETHUSDT",
+    "BINANCE:SOLUSDT",
+    "CRYPTOCAP:USDT.D",
+    "BINANCE:MATICUSDT",
+    "BINANCE:DOTUSDT",
+    "BINANCE:NEARUSDT",
+    "BINANCE:PEPEUSDT",
+    "BINANCE:RUNEUSDT",
+    "BINANCE:UNIUSDT",
+    "COINBASE:AVAXUSD",
+    "BINANCE:BNBUSDT",
+    "BINANCE:XRPUSD"
+  ],
+  "calendar": false,
+  "support_host": "https://www.tradingview.com"
+}
+
+// Converte o objeto em uma string JSON
+const widgetConfigString = JSON.stringify(widgetConfig);
+
+// Cria o elemento script dinamicamente
+const script = document.createElement("script");
+script.type = "text/javascript";
+script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
+script.async = true;
+
+// Adiciona o conteúdo JSON como texto do script
+script.text = widgetConfigString;
+
+// Anexa o script ao container
+const widgetContainer = document.querySelector(".tradingview-container1");
+widgetContainer.appendChild(script);
+
 function confirma_excluir()
 {
     resp=confirm("Confirma Exclusão?")

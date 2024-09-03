@@ -5,7 +5,7 @@
 <header>
       <div>
         <nav class="navbar border-bottom border-body" >
-          <img src="imagens/logo-BC-rmvBG.png" alt="logo-bolsacripto" id="logo">
+          <a class="alteraPagina" href="homeNoticias.php"><img src="imagens/logo-BC-rmvBG.png" alt="logo-bolsacripto" id="logo"></a>
             <nav class="navbar navbar-expand-lg " id="navegacao">
               
                 <div class="container-fluid" id="container-fluid">

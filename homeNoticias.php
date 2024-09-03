@@ -2,23 +2,11 @@
   include_once('includes/logica/functions.php');
   include_once('includes/logica/conecta.php');
 ?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="js/scripts.js"></script>
-    <title>Home</title>
-
-</head>
 <body>
     <main id="home">
-      <h1>Bolsacripto</h1>
+      <div class="container">
+          <h1>Bolsacripto</h1>
+      </div>
           <div class="container" id="top">
             <div class="carousel-inner" id="slider" >
               <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -235,71 +223,6 @@
               </div>
       </div>
     </main>
-   
-    <footer>
-      <div id="footer-content">
-        <div id="footer-contacts">
-          <img src="imagens/logo-BC-rmvBG.png" alt="logo-bolsacripto" id="logo">
-          <div id="footer-media">
-            <a href="" class="footer-link" id="instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="" class="footer-link" id="facebook">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="" class="footer-link" id="whatsapp">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-          </div>
-
-        </div>
-        <ul class="footer-list">
-          <li>
-            <h3>Blog</h3>
-          </li>
-          <li>
-            <a href="" class="footer-link">Artigos</a>
-          </li>
-          <li>
-            <a href="" class="footer-link">Análises</a>
-          </li>
-          <li>
-            <a href="" class="footer-link">Ferramentas</a>
-          </li>
-        </ul>
-        <ul class="footer-list">
-          <li>
-            <h3>Produtos</h3>
-          </li>
-          <li>
-            <a href="" class="footer-link">App</a>
-          </li>
-          <li>
-            <a href="" class="footer-link"></a>
-          </li>
-          <li>
-            <a href="" class="footer-link">Tech</a>
-          </li>
-        </ul>
-        <div id="footer-subscribe">
-          <h3>Newsletter</h3>
-          <p>
-            Inscreva-se na nossa newsletter para receber as mais novas notícias do mercado financeiro.
-          </p>
-          <div id="input-group">
-            <input type="email" id="email">
-            <button>
-              <i class="fa-regular fa-envelope"></i>
-            </button>
-          </div>
-          
-        </div>
-      </div>
-      <div id="footer-copyright">
-        &#169
-        2024 All rights reserved
-      </div>
-    </footer>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
    <script src="js/scripts.js"></script>
 </body>

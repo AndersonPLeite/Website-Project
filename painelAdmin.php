@@ -1,7 +1,8 @@
 <?php
-include_once('includes/componentes/cabecalho.php');
-include_once('includes/logica/functions.php');
 include_once('includes/logica/conecta.php');
+include_once('includes/logica/functions.php');
+include_once('includes/componentes/cabecalho.php');
+
 session_start();
 
 $stmt = $conexao->prepare("SELECT * FROM categorias");
@@ -15,8 +16,9 @@ if(!isset($_SESSION['logado']))
 }
 
 ?>
-   
-    </head>
+    <body id="painelAdmin">
+        
+    
          <h3> Listagem de Usuários </h3>
     <?php
         $pessoas = listarPessoa($conexao);
@@ -101,8 +103,8 @@ if(isset($_SESSION['msgCategoria']))
             <a href="login.php">Login</a>
         </section>
     </main>
-    </body>
     <script type="text/javascript" src="js/scripts.js"></script>
+    </body>
 </html>
 
 
