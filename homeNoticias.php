@@ -195,12 +195,12 @@
           </div>
         
         <div class="container" id="cards">
-            <div class="card-group">
+            <div class="card-group" >
                 <div class="card">
                   <img src="imagens/ibovespa.jpeg.webp" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">O quê esperar do Ibovespa em 2024</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"></p>
                     <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                   </div>
                 </div>
@@ -208,7 +208,7 @@
                   <img src="imagens/Krypto Kotek.jpeg" class="card-img-top" alt="alta btc">
                   <div class="card-body">
                     <h5 class="card-title">Bitcoin rumo a máxima histórica</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text"></p>
                     <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                   </div>
                 </div>
@@ -216,7 +216,7 @@
                   <img src="imagens/bearmarket.webp" class="card-img-top" alt="Mercado de baixa">
                   <div class="card-body">
                     <h5 class="card-title">Mercados internacionais amanhecem em baixa após declaração de Putin</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"></p>
                     <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                   </div>
                 </div>

@@ -18,14 +18,8 @@
         </div>
     </section>
     <section>
-        <!--<div>
-            <div class="tradingview-container1" id="grafico"></div>
-        </div>
-        
-        <script type="text/javascript" src="js/script.js" async></script>-->
-        <!-- TradingView Widget BEGIN -->
         <div id="chart">
-            <div class="tradingview-widget-container1">
+            <div class="tradingview-widget-container">
                             <div class="tradingview-widget-container__widget"></div>
                             <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async/>
                                     {

@@ -19,7 +19,7 @@
 <title>Recuperar Senha</title>
 </head>
 <body> 
-    <form action="includes/logica/logica_pessoa.php" method="post">
+    <form action="includes/logica/controller.php" method="post">
         <p><label for="email">email: </label><input type="text" name="email" id="email"></p>
         <p><button type="submit" id='recuperar' name='recuperar' value="Recuperar"> RecuperarSenha </button>  </p>
     </form>

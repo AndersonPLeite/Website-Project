@@ -22,7 +22,7 @@ if( empty($_GET['utilizador']) || empty($_GET['confirmacao']) )
      {
  ?>   
  
-        <form action="includes/logica/logica_pessoa.php" method="post">
+        <form action="includes/logica/controller.php" method="post">
             <input type="hidden" name="email" value="<?php echo $utilizador ?>" />
            Nova Senha: <input type="password" name="novasenha" />
             <input type="submit" name="alterarsenha" value="Alterar Senha" />

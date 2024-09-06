@@ -5,7 +5,7 @@
 <header>
       <div class="container-fluid">
         <nav class="navbar border-bottom border-body container-fuid">
-          <img src="imagens/logo-BC-rmvBG.png" alt="logo-bolsacripto" id="logo"></a>
+          <img src="imagens/logo-BC-rmvBG.png" alt="logo-bolsacripto" id="logo">
             <nav class="navbar navbar-expand-lg " id="navegacao">
               
                 <div class="container-fluid" id="container-fluid">
