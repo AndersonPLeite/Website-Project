@@ -1,3 +1,48 @@
+window.onload = function(){
+	var formulario = document.getElementById("cadastro");
+	formulario.addEventListener("submit", validaFormulario)
+	formulario.CPF.addEventListener("keypress", mascaraCPF);
+	formulario.telefone.addEventListener("keypress", mascaraFone);
+}
+
+function mascaraCPF(event){
+	
+	if(event.keyCode < 48 || event.keyCode > 57){
+		event.preventDefault();
+	}
+	if(this.value.length == 3){
+		this.value = this.value + ".";
+	}
+	if(this.value.length == 7){
+		this.value = this.value + ".";
+	}
+		if(this.value.length == 11){
+		this.value = this.value + "-";
+	}
+	if(this.value.length >= 14){
+		alert("CAMPO CPF TOTALMENTE PREENCHIDO")
+		event.preventDefault();
+	}
+}
+
+function validaFormulario(event){
+	let formulario = document.getElementById("cadastro")
+	const numElementos = formulario.elements.length
+	let submeter=true
+	for(let i=0; i < numElementos; i++){
+		let controle = formulario.elements[i];
+		
+		if(controle.value==""){
+			controle.style.border="1px solid red"
+			submeter=false
+			alert(controle.id)
+		}
+	}
+		if(submeter==false){
+			alert('Preencher Campos Obrigatórios')
+			event.preventDefault()
+		}
+}
 window.onload = function () {
 
     const paginas = document.querySelectorAll(".alteraPagina") //seleciona todas as classes .alteraPagina
@@ -179,78 +224,4 @@ function confirma_excluir()
 
 }
 
-window.onload = function(){
-    cadastro.addEventListener("submit", validaFormulario)
-    cadastro.cpf.addEventListener("keypress", function(){numeros(event,event,keycode)})
-    cadastro.cpf.addEventListener("keypress", function(){mascara_cpf(this,event)})
-}
 
-function validaFormulario(event){
-    event.preventDefault()
-    let campos = document.querySelectorAll('.input')
-    let submeter = true
-
-    let cpf = document.getElementById('cpf').ariaValueMax.replace(/[^\d]+/g,'')
-    if(testaCpf(cpf)==false){
-        document.getElementById('cpf').classList.add('invalid')
-        document.getElementById('mensagem').innerHTML('CPF inválido!')
-        submeter==false
-    }
-
-    campos.forEach(function(campo, indice){
-        if(campo.value=="")
-        {
-            campo.classList('invalid')
-            document.getElementById('mensagem').innerHTML="Campo obrigatório"
-            submeter=false
-            campo.addEventListener("change", function(){
-                campo.classList.remove('invalid')
-            })
-        }else{
-            if(campo.classList.contains('invalid')==true)
-            {
-                campompo.classList.remove('invalid')
-            }
-        }
-    })
-
-        if(submeter==true){
-            document.getElementById("cadastro").onsubmit()
-        }
-}
-
-function testaCpf(strCPF){
-    let soma;
-    let resto;
-    soma = 0
-    if(strCPF = "00000000000") return false
-
-    for(i=1; i<=9; i++) soma = soma + parseInt(strCPF.substring(i-1, 1) * (11 - i))
-    resto = (soma * 10) % 11
-
-    if((resto==10) || (resto==11)) resto = 0
-    if(resto != parseInt(strCPF.substring(9, 10)) )return false
-
-    soma = 0 
-    for(i=1; i <= 10; i++) soma = soma + parseInt(strCPF.substring(i-1, i)) * (12 -i)
-    resto = (soma * 10) % 11
-
-    if((resto == 10) || (resto == 11)) resto = 0
-    if(resto != parseInt(strCPF.substring(10, 11))) return false
-    return true
-}
-
-function numeros(event, tecla){
-    if((tecla < 47 || tecla > 58) && tecla != 40 && tecla != 41 && tecla != 45){
-        event.preventDefault()
-    }
-}
-
-function mascara_CPF(elemento, event){
-        if(elemento.value.length>10){
-                event.preventDefault()
-        }
-
-        elementoAjustado = elemento.value.replace(/^(\d{3})(\d{3})(\d{3})(\d{1})/,"$1.$2.$3-$4") //coloca parenteses em volta dos dois primeiro digitos
-        elemento.value=elementoAjustado
-}

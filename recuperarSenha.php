@@ -2,7 +2,7 @@
 
     include_once('includes/componentes/cabecalho.php');
     include_once('includes/componentes/header.php');
-    include_once('includes/logica/funcoes_pessoa.php');
+    include_once('includes/logica/functions.php');
     include_once('includes/logica/conecta.php');
     
 if( empty($_GET['utilizador']) || empty($_GET['confirmacao']) )

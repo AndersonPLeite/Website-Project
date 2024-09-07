@@ -252,7 +252,7 @@ $assunto="Promoção do dia";
             echo $recuperacao;
               $mail = new PHPMailer();
 
-        $link= "http://localhost/recuperarSenha.php?utilizador=$email&confirmacao=$chave";
+        $link= "http://localhost/Website-Project/recuperarSenha.php?utilizador=$email&confirmacao=$chave";
 
         $mensagem= "Clique no link para recuperar sua senha ".$link;
         
