@@ -35,6 +35,15 @@
             echo 'Error: ' . $e->getMessage();
         }
     }
+    function editarAdmin($conexao, $array){
+        try {
+            $query = $conexao->prepare("update administradores set nome= ?, email = ?, senha= ?, foto_perfil where id=? and status=true");
+            $resultado = $query->execute($array);             
+            return $resultado;
+        }catch(PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
 
     function alterarPessoaPerfil($conexao, $array){
         try {
@@ -72,6 +81,17 @@
       }  
 
     }
+    function listarAdmin($conexao){
+      try {
+        $query = $conexao->prepare("SELECT * FROM administradores where status=true");      
+        $query->execute();
+        $administradores = $query->fetchAll();
+        return $administradores;
+      }catch(PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+      }  
+
+    }
 
      function buscarPessoa($conexao,$array){
         try {
@@ -79,6 +99,20 @@
         if($query->execute($array)){
             $pessoa = $query->fetch(); //coloca os dados num array $usuario
             return $pessoa;
+        }
+        else{
+            return false;
+        }
+         }catch(PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+      }  
+    }
+     function buscarAdmin($conexao,$array){
+        try {
+        $query = $conexao->prepare("select * from administradores where id=? and status=true");
+        if($query->execute($array)){
+            $admin = $query->fetch(); //coloca os dados num array $usuario
+            return $admin;
         }
         else{
             return false;

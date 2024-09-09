@@ -78,20 +78,7 @@
   //      die();
         header('location:../../login.php');
     }
-#CADASTRAR ADMINISTRADOR
-if(isset($_POST['cadastrarAdm'])){
-    if(isset($_FILES["imagemAdm"]) && !empty($_FILES["imagemAdm"]))
-        {
-        move_uploaded_file($_FILES["imagemAdm"]["tmp_name"], "../../imagens/".$_FILES["imagemAdm"]["name"]);
-        echo "update realizado com sucesso";
-        }
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
-    $foto_perfil = $_FILES["imagemAdm"]["name"];
-    $array = array($nome, $email, $senha,1,$foto_perfil);
-    $retorno= inserirAdm($conexao, $array);
-}
+
 #ENTRAR
     if(isset($_POST['entrar'])){
         $email = $_POST['email'];
@@ -109,6 +96,27 @@ if(isset($_POST['cadastrarAdm'])){
             header('location:../../login.php');
         }
     }
+#SAIR
+if(isset($_POST['sair'])){
+    session_start();
+    session_destroy();
+    header('location:../../login.php');
+}
+######################################## ADMINISTRADOR ##########################################
+#CADASTRAR ADMINISTRADOR
+if(isset($_POST['cadastrarAdm'])){
+    if(isset($_FILES["imagemAdm"]) && !empty($_FILES["imagemAdm"]))
+        {
+        move_uploaded_file($_FILES["imagemAdm"]["tmp_name"], "../../imagens/".$_FILES["imagemAdm"]["name"]);
+        echo "update realizado com sucesso";
+        }
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+    $foto_perfil = $_FILES["imagemAdm"]["name"];
+    $array = array($nome, $email, $senha,1,$foto_perfil);
+    $retorno= inserirAdm($conexao, $array);
+}
 # ENTRAR ADMINISTRADOR
     if(isset($_POST['entrarAdm'])){
         $email = $_POST['email'];
@@ -126,20 +134,28 @@ if(isset($_POST['cadastrarAdm'])){
             header('location:../../loginAdm.php');
         }
     }
-#SAIR
-    if(isset($_POST['sair'])){
-            session_start();
-            session_destroy();
-            header('location:../../login.php');
+ 
+#EDITAR ADMIN
+    if(isset($_Post['editarAdmin'])){
+        $id = $_POST['editarAdmin'];
+        $array = array($id);
+        $admin=buscarAdmin($conexao, $array);
+        require_once('../../editarAdmin.php');
     }
-#EDITAR PESSOA
-    if(isset($_POST['editar'])){
+#ALTERAR ADMIN
+if(isset($_POST['alterarAdmin'])){
     
-            $codpessoa = $_POST['editar'];
-            $array = array($codpessoa);
-            $pessoa=buscarPessoa($conexao, $array);
-            require_once('../../alterarPessoa.php');
-    }    
+    $id = $_POST['id'];
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha']; 
+    $imagemAdm = $_POST['imagemAdm'];   
+    $array = array($nome, $email,$senha ,$imagemAdm );
+    editarAdmin($conexao, $array);
+
+    header('location:../../editarAdmin.php');
+}
+##################################### USUÁRIO ===============================================
 #ALTERAR PESSOA
     if(isset($_POST['alterar'])){
     
@@ -153,6 +169,14 @@ if(isset($_POST['cadastrarAdm'])){
     
             header('location:../../index.php');
     }
+#EDITAR PESSOA
+if(isset($_POST['editar'])){
+    
+    $codpessoa = $_POST['editar'];
+    $array = array($codpessoa);
+    $pessoa=buscarPessoa($conexao, $array);
+    require_once('../../alterarPessoa.php');
+} 
 #DELETAR PESSOA
     if(isset($_POST['deletar'])){
         $codpessoa = $_POST['deletar'];
@@ -319,7 +343,7 @@ $assunto="Promoção do dia";
 require_once('conecta.php');
 require_once('funcoes_produto.php');
 */
-
+#################################################### PRODUTO ################################################
 #CADASTRAR CATEGORIA
 if(isset($_POST['Cadastro'])){
     $nome = $_POST['cat'];
