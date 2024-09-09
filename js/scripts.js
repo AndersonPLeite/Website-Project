@@ -1,9 +1,10 @@
-window.onload = function(){
+/*window.onload = function(){
 	var formulario = document.getElementById("cadastro");
 	formulario.addEventListener("submit", validaFormulario)
 	formulario.CPF.addEventListener("keypress", mascaraCPF);
 	formulario.telefone.addEventListener("keypress", mascaraFone);
 }
+
 
 function mascaraCPF(event){
 	
@@ -42,7 +43,7 @@ function validaFormulario(event){
 			alert('Preencher Campos Obrigatórios')
 			event.preventDefault()
 		}
-}
+}*/
 window.onload = function () {
 
     const paginas = document.querySelectorAll(".alteraPagina") //seleciona todas as classes .alteraPagina
@@ -156,56 +157,194 @@ function pesquisaUsuarios(event) {
 
 }
 
-const config = {
+
+const widgetConfigIbov = {
+    "width": "950",
+    "height": "600",
+    "symbolsGroups": [
+      {
+        "name": "Bonds",
+        "originalName": "Bonds",
+        "symbols": [
+          {
+            "name": "BMFBOVESPA:VALE3"
+          },
+          {
+            "name": "BMFBOVESPA:SUZB3"
+          },
+          {
+            "name": "BMFBOVESPA:PETR4"
+          },
+          {
+            "name": "BMFBOVESPA:BBAS3"
+          },
+          {
+            "name": "BMFBOVESPA:CSAN3"
+          },
+          {
+            "name": "BMFBOVESPA:BEEF3"
+          },
+          {
+            "name": "BMFBOVESPA:AZUL4"
+          },
+          {
+            "name": "BMFBOVESPA:MGLU3"
+          },
+          {
+            "name": "BMFBOVESPA:INBR32"
+          },
+          {
+            "name": "BMFBOVESPA:B3SA3"
+          },
+          {
+            "name": "BMFBOVESPA:WEGE3"
+          },
+          {
+            "name": "BMFBOVESPA:ITUB4"
+          },
+          {
+            "name": "BMFBOVESPA:BRFS3"
+          },
+          {
+            "name": "BMFBOVESPA:ELET6"
+          },
+          {
+            "name": "BMFBOVESPA:BBDC4"
+          },
+          {
+            "name": "BMFBOVESPA:ABEV3"
+          },
+          {
+            "name": "BMFBOVESPA:JBSS3"
+          },
+          {
+            "name": "BMFBOVESPA:CXSE3"
+          },
+          {
+            "name": "BMFBOVESPA:ELET6"
+          },
+          {
+            "name": "BMFBOVESPA:ELET3"
+          },
+          {
+            "name": "BMFBOVESPA:NIKE34"
+          },
+          {
+            "name": "BMFBOVESPA:LREN3"
+          },
+          {
+            "name": "BMFBOVESPA:CMIG4"
+          },
+          {
+            "name": "BMFBOVESPA:RAIZ4"
+          },
+          {
+            "name": "BMFBOVESPA:GGBR4"
+          },
+          {
+            "name": "BMFBOVESPA:ITSA4"
+          },
+          {
+            "name": "BMFBOVESPA:EGIE3"
+          },
+          {
+            "name": "BMFBOVESPA:EMBR3"
+          },
+          {
+            "name": "BMFBOVESPA:USIM5"
+          },
+          {
+            "name": "BMFBOVESPA:KLBN4"
+          },
+          {
+            "name": "BMFBOVESPA:MULT3"
+          },
+          {
+            "name": "BMFBOVESPA:ROXO34"
+          },
+          {
+            "name": "BMFBOVESPA:BRKM5"
+          },
+          {
+            "name": "BMFBOVESPA:SLCE3"
+          },
+          {
+            "name": "BMFBOVESPA:TIMS3"
+          },
+          {
+            "name": "BMFBOVESPA:FLRY3"
+          },
+          {
+            "name": "BMFBOVESPA:PETZ3"
+          },
+          {
+            "name": "BMFBOVESPA:POMO4"
+          },
+          {
+            "name": "BMFBOVESPA:ITSA3"
+          },
+          {
+            "name": "BMFBOVESPA:TASA4"
+          },
+          {
+            "name": "BMFBOVESPA:ITUB3"
+          },
+          {
+            "name": "BMFBOVESPA:CRFB3"
+          },
+          {
+            "name": "BMFBOVESPA:TEND3"
+          },
+          {
+            "name": "BMFBOVESPA:EQTL3"
+          },
+          {
+            "name": "BMFBOVESPA:PSSA3"
+          },
+          {
+            "name": "BMFBOVESPA:CASH3"
+          },
+          {
+            "name": "BMFBOVESPA:MSFT34"
+          },
+          {
+            "name": "BMFBOVESPA:GOGL34"
+          },
+          {
+            "name": "BMFBOVESPA:SANB4"
+          }
+        ]
+      }
+    ],
+    "showSymbolLogo": true,
+    "isTransparent": true,
+    "colorTheme": "dark",
+    "locale": "br"
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var tradingviewwidgetcontainer = document.querySelector('.tradingviewIbov')
+        if(tradingviewwidgetcontainer){
+                console.log("Hello")
+                const widgetConfigString = JSON.stringify(widgetConfigIbov);
+                
+                const script = document.createElement("script");
+                script.type = "text/javascript";
+                script.src = "https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js";
+                script.async = true;
+                
+                
+                script.text = widgetConfigString;
+                
+                
+                const widgetContainerIbov = document.querySelector(".tradingviewIbov");
+                widgetContainerIbov.appendChild(script);
+        }else{
+                console.error('Element with class "tradingview-container-Ibov" not found.');
+    }
     
-};
-function createConfig(){
-    return  config
-}
-
-const widgetConfig = {
-  "autosize": true,
-  "symbol": "BINANCE:BTCUSDT",
-  "interval": "D",
-  "timezone": "Etc/UTC",
-  "theme": "dark",
-  "style": "1",
-  "locale": "br",
-  "allow_symbol_change": true,
-  "watchlist": [
-    "BITSTAMP:BTCUSD",
-    "BINANCE:ETHUSDT",
-    "BINANCE:SOLUSDT",
-    "CRYPTOCAP:USDT.D",
-    "BINANCE:MATICUSDT",
-    "BINANCE:DOTUSDT",
-    "BINANCE:NEARUSDT",
-    "BINANCE:PEPEUSDT",
-    "BINANCE:RUNEUSDT",
-    "BINANCE:UNIUSDT",
-    "COINBASE:AVAXUSD",
-    "BINANCE:BNBUSDT",
-    "BINANCE:XRPUSD"
-  ],
-  "calendar": false,
-  "support_host": "https://www.tradingview.com"
-}
-
-// Converte o objeto em uma string JSON
-const widgetConfigString = JSON.stringify(widgetConfig);
-
-// Cria o elemento script dinamicamente
-const script = document.createElement("script");
-script.type = "text/javascript";
-script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
-script.async = true;
-
-// Adiciona o conteúdo JSON como texto do script
-script.text = widgetConfigString;
-
-// Anexa o script ao container
-const widgetContainer = document.querySelector(".tradingview-container1");
-widgetContainer.appendChild(script);
+  })
+  
 
 function confirma_excluir()
 {

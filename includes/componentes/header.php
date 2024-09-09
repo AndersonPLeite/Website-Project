@@ -17,10 +17,10 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Ibovespa</a>
+                        <a class="nav-link" aria-current="page" href="acoes.php">Ibovespa</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Cotações</a>
+                        <a class="nav-link alteraPagina" href="criptomoedas.php">Criptomoedas</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -38,7 +38,7 @@
                       </li>
                     </ul>
                     <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Pesquisar">
+                      <input class="form-control me-2" type="search"  aria-label="Pesquisar">
                       <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                     </form>
                   </div>

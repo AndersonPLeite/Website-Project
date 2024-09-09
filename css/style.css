@@ -149,19 +149,20 @@
     background-size: cover;
     color: #FFF;
 }
+#ibovespa{
+        height: 80%;
+        width: 100%;
+        margin: auto;
+    }
 
 #chart{
-    height: 40rem;
-    width: 75%;
+    height: 65rem;
+    width: 70rem;
     margin: auto;
-}
-.tradingview-widget-container1{
-    height: 30rem;
-    width: 100%;
-    margin: auto;
+    padding-top: 150px;
     border-radius: 10px;
-    z-index: 2;
 }
+
 #iframe{
     display: flex;
     align-items: center;
