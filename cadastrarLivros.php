@@ -1,10 +1,11 @@
 <?php
-session_start();
+/*session_start();
  if(!isset($_SESSION['logado']))
  {
      header('location:login.php');
      
  }
+ */
 include_once('includes/logica/conecta.php');
 include_once('includes/logica/functions.php');
 include_once('includes/componentes/cabecalho.php');

@@ -30,9 +30,9 @@ foreach($administradores as $administrador)
 <!DOCTYPE html>
 <html>
 <main>
-    <section>
+    <section class="menuAdmin">
         <div>
-            <a class="alteraPagina" href="alterarPessoa.php"></a>
+            <a class="alteraPagina" href="alterarPessoa.php">Gerenciar Usuários</a>
         </div>
         <div>
         <a class="alteraPagina" href="cadastrarAdmin.php">Gerenciar Administradores</a>

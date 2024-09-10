@@ -116,6 +116,7 @@ if(isset($_POST['cadastrarAdm'])){
     $foto_perfil = $_FILES["imagemAdm"]["name"];
     $array = array($nome, $email, $senha,1,$foto_perfil);
     $retorno= inserirAdm($conexao, $array);
+    header(('location:../../painelAdmin.php'));
 }
 # ENTRAR ADMINISTRADOR
     if(isset($_POST['entrarAdm'])){
@@ -140,7 +141,7 @@ if(isset($_POST['cadastrarAdm'])){
         $id = $_POST['editarAdmin'];
         $array = array($id);
         $admin=buscarAdmin($conexao, $array);
-        require_once('../../editarAdmin.php');
+        require_once('../../alterarAdmin.php');
     }
 #ALTERAR ADMIN
 if(isset($_POST['alterarAdmin'])){
@@ -150,10 +151,10 @@ if(isset($_POST['alterarAdmin'])){
     $email = $_POST['email'];
     $senha = $_POST['senha']; 
     $imagemAdm = $_POST['imagemAdm'];   
-    $array = array($nome, $email,$senha ,$imagemAdm );
-    editarAdmin($conexao, $array);
+    $array = array($nome, $email,$senha ,$imagemAdm,$id );
+    alterarAdmin($conexao, $array);
 
-    header('location:../../editarAdmin.php');
+    header('location:../../painelAdmin.php');
 }
 #DELETAR ADMIN
 if(isset($_POST['deletarAdmin'])){
@@ -352,7 +353,16 @@ require_once('conecta.php');
 require_once('funcoes_produto.php');
 */
 #################################################### NOTÍCIA #################################################
-
+if(isset($_POST['cadastrarNoticia'])){
+    $titulo = $_POST['titulo'];
+    $conteudo = $_POST['conteudo'];
+    $data_publicacao = $_POST['data_publicacao'];
+    $fonte = $_POST['fonte'];
+    $categoria = $_POST['categoria'];
+    $array = array($titulo, $conteudo,$data_publicacao, $fonte,$categoria);
+    $retorno= inserirNoticia($conexao, $array);
+    header(('location:../../painelAdmin.php'));
+}
 
 
 #################################################### PRODUTO ################################################

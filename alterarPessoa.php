@@ -2,7 +2,6 @@
 <html>
 <?php
  include_once('includes/componentes/cabecalho.php');
- include_once('includes/componentes/header.php');
 ?>
     <title>Alterar Usuário</title>
 </head>

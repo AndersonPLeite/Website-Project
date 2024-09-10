@@ -35,7 +35,7 @@
             echo 'Error: ' . $e->getMessage();
         }
     }
-    function editarAdmin($conexao, $array){
+    function alterarAdmin($conexao, $array){
         try {
             $query = $conexao->prepare("update administradores set nome= ?, email = ?, senha= ?, foto_perfil where id=? and status=true");
             $resultado = $query->execute($array);             
@@ -377,6 +377,20 @@ function pesquisarPessoaEmail($conexao,$array){
              echo 'Error: ' . $e->getMessage();
        }  
      }
+
+     function inserirNoticia($conexao,$array){
+        try {
+            $query = $conexao->prepare("insert into noticias(titulo, conteudo,data_publicacao, fonte, categoria) values (?, ?, ?, ?, ?)");
+
+            $resultado = $query->execute($array);
+            var_dump($resultado);
+            return $resultado;
+        }catch(PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+    }
+
 
      function listarNoticia($conexao){
             try{
