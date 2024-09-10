@@ -70,6 +70,17 @@
 
     }
  
+    function deletarAdministrador($conexao, $array){
+        try {
+            $query = $conexao->prepare("delete from administradores where id = ?");
+            $resultado = $query->execute($array);   
+             return $resultado;
+        }catch(PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+    }
+ 
     function listarPessoa($conexao){
       try {
         $query = $conexao->prepare("SELECT * FROM pessoa where status=true");      
@@ -366,4 +377,16 @@ function pesquisarPessoaEmail($conexao,$array){
              echo 'Error: ' . $e->getMessage();
        }  
      }
+
+     function listarNoticia($conexao){
+            try{
+                $query = $conexao->prepare("SELECT * FROM noticias");
+                $query->execute();
+                $noticias = $query->fetchAll();
+                return $noticias;
+            }catch(PDOException $e){
+                echo 'Error: '.$e->getMessage();
+            }
+     }
    ?>
+

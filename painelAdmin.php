@@ -32,17 +32,17 @@ foreach($administradores as $administrador)
 <main>
     <section>
         <div>
-            <button class="btn btn-outline-success" type="submit">Gerenciar Usuários</button>
+            <a class="alteraPagina" href="alterarPessoa.php"></a>
         </div>
         <div>
         <a class="alteraPagina" href="cadastrarAdmin.php">Gerenciar Administradores</a>
 
         </div>
         <div>
-            <a href="adicionarNotícia.php"></a>
+            <a class="alteraPagina" href="adicionarNoticia.php">Gerenciar Notícia</a>
         </div>
         <div>
-            <a href="cadastrarLivros.php">Gerenciar Livros</a>
+            <a class="alteraPagina" href="cadastrarLivros.php">Gerenciar Livros</a>
         </div>
     </section>
     <section id="carrega">

@@ -10,7 +10,7 @@
               
                 <div class="container-fluid" id="container-fluid">
                     
-                  <a class="navbar-brand alteraPagina" href="homeNoticias.php">Notícias</a>
+                  <a class="navbar-brand alteraPagina" href="noticia.php">Notícias</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -20,14 +20,14 @@
                         <a class="nav-link" aria-current="page" href="acoes.php">Ibovespa</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link alteraPagina" href="criptomoedas.php">Criptomoedas</a>
+                        <a class="nav-link" href="criptomoedas.php">Criptomoedas</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Categorias
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item alteraPagina"  href="criptomoedas.php">Criptomoedas</a></li>
+                          <li><a class="dropdown-item"  href="criptomoedas.php">Criptomoedas</a></li>
                           <li><a class="dropdown-item" href="#">Renda Fixa</a></li>
                           <li><hr class="dropdown-divider"></li>
                           <li><a class="dropdown-item alteraPagina" href="biblioteca.php">Livros</a></li>
@@ -44,12 +44,10 @@
                   </div>
                 </div>
               </nav>
-        </nav>
       </div>
-        
       <div class="tradingview-widget-container">
         <div class="tradingview-widget-container__widget"></div>
-        <!--<div class="tradingview-widget-copyright"><a href="https://br.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a></div>-->
+        <div class="tradingview-widget-copyright"><a href="https://br.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a></div>
         <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async/>
         {
         "symbols": [
@@ -127,4 +125,4 @@
         </script>
       </div>
     </header>
-    <script type="text/javascript" src="js/scripts.js"></script>
+

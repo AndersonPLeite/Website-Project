@@ -1,49 +1,63 @@
-/*window.onload = function(){
-	var formulario = document.getElementById("cadastro");
-	formulario.addEventListener("submit", validaFormulario)
-	formulario.CPF.addEventListener("keypress", mascaraCPF);
-	formulario.telefone.addEventListener("keypress", mascaraFone);
-}
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('#registrationForm');
 
+  form.addEventListener('submit', function(event) {
+      // Prevenir o envio do formulário se houver erros
+      if (!validateForm()) {
+          event.preventDefault();
+      }
+  });
 
-function mascaraCPF(event){
-	
-	if(event.keyCode < 48 || event.keyCode > 57){
-		event.preventDefault();
-	}
-	if(this.value.length == 3){
-		this.value = this.value + ".";
-	}
-	if(this.value.length == 7){
-		this.value = this.value + ".";
-	}
-		if(this.value.length == 11){
-		this.value = this.value + "-";
-	}
-	if(this.value.length >= 14){
-		alert("CAMPO CPF TOTALMENTE PREENCHIDO")
-		event.preventDefault();
-	}
-}
+  function validateForm() {
+      let isValid = true;
 
-function validaFormulario(event){
-	let formulario = document.getElementById("cadastro")
-	const numElementos = formulario.elements.length
-	let submeter=true
-	for(let i=0; i < numElementos; i++){
-		let controle = formulario.elements[i];
-		
-		if(controle.value==""){
-			controle.style.border="1px solid red"
-			submeter=false
-			alert(controle.id)
-		}
-	}
-		if(submeter==false){
-			alert('Preencher Campos Obrigatórios')
-			event.preventDefault()
-		}
-}*/
+      // Limpar mensagens de erro anteriores
+      clearErrors();
+
+      // Validar nome de usuário
+      const username = document.getElementById('nome').value;
+      if (username.trim() === '') {
+          showError('usernameError', 'O nome de usuário é obrigatório.');
+          isValid = false;
+      }
+
+      // Validar e-mail
+      const email = document.getElementById('email').value;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+          showError('emailError', 'Por favor, insira um e-mail válido.');
+          isValid = false;
+      }
+
+      // Validar senha
+      const password = document.getElementById('senha').value;
+      if (password.length < 6) {
+          showError('passwordError', 'A senha deve ter pelo menos 6 caracteres.');
+          isValid = false;
+      }
+
+      // Validar confirmação de senha
+      const confirmPassword = document.getElementById('confirmPassword').value;
+      if (password !== confirmPassword) {
+          showError('confirmPasswordError', 'As senhas não coincidem.');
+          isValid = false;
+      }
+
+      return isValid;
+  }
+
+  function showError(elementId, message) {
+      document.getElementById(elementId).textContent = message;
+  }
+
+  function clearErrors() {
+      const errorElements = document.querySelectorAll('.error');
+      errorElements.forEach(element => {
+          element.textContent = '';
+      });
+  }
+});
+
 window.onload = function () {
 
     const paginas = document.querySelectorAll(".alteraPagina") //seleciona todas as classes .alteraPagina

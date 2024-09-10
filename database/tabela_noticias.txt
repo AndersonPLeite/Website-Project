@@ -1,0 +1,8 @@
+CREATE TABLE noticias (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    conteudo TEXT,
+    data_publicacao DATE,
+    fonte VARCHAR(100),
+    categoria VARCHAR(50)
+);

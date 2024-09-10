@@ -155,6 +155,14 @@ if(isset($_POST['alterarAdmin'])){
 
     header('location:../../editarAdmin.php');
 }
+#DELETAR ADMIN
+if(isset($_POST['deletarAdmin'])){
+    $id = $_POST['deletarAdmin'];
+    $array=array($id);
+    deletarAdministrador($conexao, $array);
+
+    header('Location:../../painelAdmin.php');
+}
 ##################################### USUÁRIO ===============================================
 #ALTERAR PESSOA
     if(isset($_POST['alterar'])){
@@ -212,7 +220,7 @@ if (isset($_POST['ENVIAR']))
 {
 $mensagem = $_POST['mensagem'];
 
-$assunto="Promoção do dia";
+$assunto="Seja Bem vindo";
 
         
         $mail = new PHPMailer();
@@ -343,6 +351,10 @@ $assunto="Promoção do dia";
 require_once('conecta.php');
 require_once('funcoes_produto.php');
 */
+#################################################### NOTÍCIA #################################################
+
+
+
 #################################################### PRODUTO ################################################
 #CADASTRAR CATEGORIA
 if(isset($_POST['Cadastro'])){

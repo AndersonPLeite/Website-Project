@@ -13,15 +13,17 @@
     <div class="container">
               <div>
                   <h2>Login</h2>
-                        <form action="includes/logica/controller.php" method="post">
+                        <form id="registrationForm"  action="includes/logica/controller.php" method="post">
                         <div class="input-field">
                             <p>Email:<label for="email">
                             </label><input type="text" name="email" id="email"  autofocus require></label></p>
+                            <span id="emailError" class="error"></span>
                             <div class="underline"></div>
                         </div>
                         <div class="input-field">
                             <p>Senha:
                               <label for="senha"></label><input type="password" name="senha" id="senha"></p>
+                              <span id="passwordError" class="error"></span>
                             <div class="underline"></div>
                         </div>
                         <div class="center">
@@ -36,13 +38,22 @@
                       
                     </form>
                     <div>
-                        
-                      </div>
+                </div>
               </div>
+              <div id='msg'>
+              </div>
+              <?php 
+                    if(isset($_SESSION['msg']))
+                    { 
+                        echo $_SESSION['msg'];
+                        unset($_SESSION['msg']);
+                    };
+               ?>
               <div class="links">
               <p><a href="esqueciSenha.php">Esqueci a senha</a></p>
         
               </div>
         </div>
+        <script type="text/javascript" src="js/scripts.js"></script>
     </body>
 </html>
