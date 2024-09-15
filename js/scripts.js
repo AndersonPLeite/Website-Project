@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function validateForm() {
-      let isValid = true;
+      const isValid = true;
 
       // Limpar mensagens de erro anteriores
       clearErrors();
@@ -171,7 +171,40 @@ function pesquisaUsuarios(event) {
 
 }
 
+function pesquisa(event) {
+  let formulario=document.getElementById("formulario")
+  let formData = new FormData(formulario);
+  const options = { method:'POST',
+                    mode:'cors',
+                    body: formData,
+                    cache:'default'}
 
+   let pagina="includes/logica/controller.php"
+   fetch(pagina,options)
+
+
+    .then(function(response){
+      if(response.ok)
+          return response.text()
+
+  })
+  .then(function(dados){
+            var x = document.getElementById("carrega2")
+            if(dados) {
+                       var conteudo = dados
+
+                  if(conteudo) {
+                      x.innerHTML = conteudo
+                  }
+              }
+
+
+   })     
+  .catch(function(e) {
+      console.log(e)
+  })
+
+}
 const widgetConfigIbov = {
     "width": "950",
     "height": "600",

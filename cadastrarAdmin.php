@@ -25,7 +25,8 @@ foreach($administradores as $administrador){
             <p>Email: <?php echo $administrador['email']; ?></p>
             
             <form action="includes/logica/controller.php" method="post">
-                <button type="submit" name="editarAdmin" value="<?php echo $administrador['id']; ?>"> Editar </button>
+                <input type="hidden" name="id" value="<?php echo $administrador['id']; ?>">
+                <button type="submit" class="alteraPagina" name="editarAdmin" value="<?php echo $administrador['id']; ?>"> Editar </button>
                 <button type="submit" name="deletarAdmin" value="<?php echo $administrador['id']; ?>" onclick = "return confirma_excluir()"> Deletar </button> 
             </form>
             <br><br>                                                          
@@ -53,3 +54,4 @@ foreach($administradores as $administrador){
             <p><button type="submit"  name='cadastrarAdm' value="CadastrarAdm"> Cadastrar Administrador </button>  </p>      
             </form>
 </section>
+<script type="text/javascript" src="js/scripts.js"></script>

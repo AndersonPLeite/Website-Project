@@ -120,10 +120,10 @@
     }
      function buscarAdmin($conexao,$array){
         try {
-        $query = $conexao->prepare("select * from administradores where id=? and status=true");
+        $query = $conexao->prepare("select * from administradores where id=?");
         if($query->execute($array)){
-            $admin = $query->fetch(); //coloca os dados num array $usuario
-            return $admin;
+            $administrador = $query->fetch(); //coloca os dados num array $usuario
+            return $administrador;
         }
         else{
             return false;
@@ -402,5 +402,26 @@ function pesquisarPessoaEmail($conexao,$array){
                 echo 'Error: '.$e->getMessage();
             }
      }
+
+     function selecionaNoticia($query, $array){
+        try{
+            $query = $array->prepare("SELECT titulo FROM noticias WHERE titulo LIKE ?");
+            if($query->execute($array)){
+                $titulos = $query->fetchAll();
+                if($titulos){
+                    return $titulos;
+                }else
+                {
+                    return false;
+                }
+            }
+            else{
+                return false;
+            }
+             }catch(PDOException $e) {
+                echo 'Error: ' . $e->getMessage();
+          }  
+        }
+           
    ?>
 

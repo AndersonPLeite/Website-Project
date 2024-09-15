@@ -138,10 +138,10 @@ if(isset($_POST['cadastrarAdm'])){
  
 #EDITAR ADMIN
     if(isset($_Post['editarAdmin'])){
-        $id = $_POST['editarAdmin'];
+        $id = $_POST['id'];
         $array = array($id);
-        $admin=buscarAdmin($conexao, $array);
-        require_once('../../alterarAdmin.php');
+        $administrador=buscarAdmin($conexao, $array);
+        header('location:../../alterarAdmin.php');
     }
 #ALTERAR ADMIN
 if(isset($_POST['alterarAdmin'])){
@@ -176,7 +176,7 @@ if(isset($_POST['deletarAdmin'])){
             $array = array($nome, $email, $cpf, $senha, $codpessoa);
             alterarPessoa($conexao, $array);
     
-            header('location:../../index.php');
+            header('location:../../painelAdmin.php');
     }
 #EDITAR PESSOA
 if(isset($_POST['editar'])){
@@ -364,6 +364,12 @@ if(isset($_POST['cadastrarNoticia'])){
     header(('location:../../painelAdmin.php'));
 }
 
+if(isset($_POST['pesquisaNoticia'])){
+    $titulo = $_POST['titulo'];
+    $array=array("%".$titulo."%");
+    $noticias=selecionaNoticia($conexao, $array);
+    require_once('../../mostrarProduto.php');
+    }
 
 #################################################### PRODUTO ################################################
 #CADASTRAR CATEGORIA

@@ -71,5 +71,5 @@
 <?php
   include_once('includes/componentes/footer.php');
 ?>
-<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/scripts.js" defer></script>
 </body>

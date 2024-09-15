@@ -28,7 +28,7 @@
                         </div>
                         <div class="center">
                             <div>
-                                  <p><button type="submit" class="btn btn-success" id='entrar' name='entrar' value="Entrar">Entrar</button></p>
+                                  <p><button type="submit" class="btn btn-success" id='entrar' name='entrar' value="Entrar" onsubmit="validateForm()">Entrar</button></p>
                             </div> 
                             <div>
                                   <a href="cadastrarPessoa.php" class="btn btn-success">Criar conta</a>

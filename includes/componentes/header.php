@@ -28,7 +28,7 @@
                         </a>
                         <ul class="dropdown-menu">
                           <li><a class="dropdown-item"  href="criptomoedas.php">Criptomoedas</a></li>
-                          <li><a class="dropdown-item" href="#">Renda Fixa</a></li>
+                          <li><a class="dropdown-item alteraPagina" href="noticias.php">Renda Fixa</a></li>
                           <li><hr class="dropdown-divider"></li>
                           <li><a class="dropdown-item alteraPagina" href="biblioteca.php">Livros</a></li>
                         </ul>
@@ -37,8 +37,8 @@
                         <a class="nav-link" name="sair" aria-current="page" href="login.php">Sair</a>
                       </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="search"  aria-label="Pesquisar">
+                    <form class="d-flex" id="formulario" role="search" method="POST">
+                      <input class="form-control me-2" type="search" name="pesquisaNoticia" id="inputPesquisa" onkeyup="pesquisa(event)" aria-label="Pesquisar">
                       <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                     </form>
                   </div>
@@ -124,5 +124,7 @@
       }
         </script>
       </div>
+      <script type="text/javascript" src="js/scripts.js"></script>
     </header>
+    
 

@@ -35,6 +35,9 @@ foreach($administradores as $administrador)
             <a class="alteraPagina" href="alterarPessoa.php">Gerenciar Usuários</a>
         </div>
         <div>
+            <a class="alteraPagina" href="emailPromocional.php">Enviar Email Promocional</a>
+        </div>
+        <div>
         <a class="alteraPagina" href="cadastrarAdmin.php">Gerenciar Administradores</a>
 
         </div>
