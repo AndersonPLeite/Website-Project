@@ -9,19 +9,19 @@
   <title>Login</title>
 </head>
 <body>
-    <img src="imagens/logo-BC-rmvBG.png" alt="logo-bolsacripto" id="logo">
+    <img src="imagens/logo-BC-rmvBG.png" alt="logo-bolsacripto">
     <div class="container">
               <div>
                   <h2>Login</h2>
                         <form id="registrationForm"  action="includes/logica/controller.php" method="post">
                         <div class="input-field">
-                            <p>Email:<label for="email">
+                            <p>Email<label for="email">
                             </label><input type="text" name="email" id="email"  autofocus require></label></p>
                             <span id="emailError" class="error"></span>
                             <div class="underline"></div>
                         </div>
                         <div class="input-field">
-                            <p>Senha:
+                            <p>Senha
                               <label for="senha"></label><input type="password" name="senha" id="senha"></p>
                               <span id="passwordError" class="error"></span>
                             <div class="underline"></div>
@@ -33,6 +33,9 @@
                             <div>
                                   <a href="cadastrarPessoa.php" class="btn btn-success">Criar conta</a>
                             </div>
+                            <p><a href="esqueciSenha.php">Esqueceu a senha?</a></p>
+
+
                         </div>
 
                       
@@ -50,7 +53,6 @@
                     };
                ?>
               <div class="links">
-              <p><a href="esqueciSenha.php">Esqueceu a senha</a></p>
         
               </div>
         </div>

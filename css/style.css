@@ -41,9 +41,10 @@
     color: red; 
 }
 .titulo{
-    height: 4rem;
+    height: 7rem;
     padding: auto;
-
+    margin-top:4rem;
+    margin-left: 12rem;
 }
 .titulo h1{
     margin-left: 5rem;
@@ -53,22 +54,23 @@ header{
     background-color: var(--bg-color-73);
 }
 .navbar{
-    padding: 0.5em;
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     background-color: var(--bg-color-73);
 }
 .navbar a{
     color: var(--bg-color-40);
     font-size: 1rem;
     font-weight: bold;
-    margin-left: 1rem;
 }
 .nav-item a:hover{
     color: var(--bg-color-71);
 }
 #navegacao{
-    width: 70%;
-    margin-right: 17rem;
+    width: 80%;
+    margin-right: 5rem;
+    padding: 1rem;
     background-color: var(--bg-color-7);
     color: var(--bg-color-40);
 }
@@ -88,7 +90,7 @@ header{
 #logo{
     height: 100px;
     width: 100px;
-    margin-left: 2.3rem;
+    margin-left: 2rem;
 }
 .form-control{
     background-color: var(--bg-color-73);
@@ -159,27 +161,20 @@ header{
 }
 /*====================================================== Notícias ========================================================================*/
 #news{
-    height: 200vh;
-    background-image: url(../imagens/buildings.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .noticias{
     display: flex;
     width: 100%;
-    height: 100% ;
+    height: 100%;
     padding: 2rem;
-    
+    font-size: 1.3rem;
 }
 .noticia1{
-    
-    width: 68%;
-    height: 800px;
-}
-.noticia1 p{
-    padding: 2rem;
-}
-.noticia2{
-    
-    width: 24%;
+    width: 100%;
+    height: 100%;
 }
 /*====================================================== cryptos =========================================================================*/
 #crypto{
@@ -188,21 +183,24 @@ header{
     background-color:var(rgb(8, 7, 18));
     background-repeat: no-repeat;
     background-size: cover;
+    padding: auto;
     color: #FFF;
 }
 #ibovespa{
-        height: 80%;
+        height: 200vh;
         width: 100%;
-        margin: auto;
         border: 1px solid var(--bg-color-30);
-    }
+}
+#ibov{
+    padding: 5rem;
+}
 
 #chart{
-    height: 55rem;
-    width: 70rem;
-    margin: auto;
+    height: 40rem;
+    width: 60rem;
+    margin:auto;
     border: 1px solid var(--bg-color-30);
-    padding-top: 50px;
+    padding-top: 2rem;
     border-radius: 10px;
 }
 
@@ -409,6 +407,42 @@ footer #logo{
 }
 section{
     border-bottom: var(--gradient) 1;
+}
+.Adm{
+    input{
+    width: 100%;
+    height: 48px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+.input2{
+    width: 30rem;
+    height: 48px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+.input-field{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(15px);
+}
+
+input:focus{
+    border-bottom: 2px solid #26a96a;
+    box-shadow: 0 1px 0 0 #26a96a;
+}
 }
 
 .download{

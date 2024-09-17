@@ -1,10 +1,11 @@
 <?php
-    session_start();
+    /*session_start();
     if(isset($_SESSION['msg']))
     { 
       echo $_SESSION['msg'];
       unset($_SESSION['msg']);
     }
+    */
     include_once('includes/logica/conecta.php');
     include_once('includes/componentes/cabecalho.php');
     require_once('includes/componentes/header.php');

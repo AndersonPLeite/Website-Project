@@ -4,7 +4,6 @@
 <?php
 
     include_once('includes/componentes/cabecalho.php');
-    include_once('includes/componentes/header.php');
     include_once('includes/logica/functions.php');
     include_once('includes/logica/conecta.php');
     /*session_start();
@@ -17,9 +16,14 @@
 ?>
 
 <title>Recuperar Senha</title>
+<link rel="stylesheet" href="css/login.css">
 </head>
-<body> 
-    <form action="includes/logica/controller.php" method="post">
-        <p><label for="email">email: </label><input type="text" name="email" id="email"></p>
-        <p><button type="submit" id='recuperar' name='recuperar' value="Recuperar"> RecuperarSenha </button>  </p>
-    </form>
+<body id="forgotPass"> 
+    <img src="imagens/logo-BC-rmvBG.png" alt="logo-bolsacripto" id="logo2">
+    <div class="container3">
+            <form action="includes/logica/controller.php" method="post">
+                <Legend><h2>Recupere sua senha</h2></Legend>
+                <p>Didite seu email<label for="email"> </label><input class="input2" type="text" name="email" id="email"></p>
+                <p><button type="submit" class="btn btn-success" id='recuperar' name='recuperar' value="Recuperar"> Recuperar Senha </button>  </p>
+            </form>
+    </div>

@@ -5,9 +5,9 @@
   include_once('includes/logica/functions.php');
 ?>
 <html>
-<body  class="container-fluid">
+<body id="news">
     <main>
-        <div class="noticias">
+        <div class="noticias container">
                 <div class="noticia1">
                     <?php
                         $noticias = listarNoticia($conexao);
@@ -24,18 +24,18 @@
                                 <section>
                                     <h2><?php echo $noticia['titulo']; ?></h2><br>
                                     <p><?php echo $noticia['conteudo']; ?></p><br>
-                                    <!--<p><?php echo $noticia['data_publicacao']; ?></p><br>
-                                   <?php echo $noticia['fonte']; ?></p><br>-->
+                                    <p><?php echo $noticia['data_publicacao']; ?></p>
+                                   <p><?php echo $noticia['fonte']; ?></p>
                                 </section>
                             <?php
                         }
                     ?>
                 </div>
-                <div class="noticia2">
-                    <a  class="alteraPagina" href="noticiaBitcoin.php"></a>
-                </div>
         </div>
         
     </main>
+<?php
+    require_once('includes/componentes/footer.php');
+?>
 </body>
 </html>

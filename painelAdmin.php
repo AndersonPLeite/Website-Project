@@ -47,6 +47,9 @@ foreach($administradores as $administrador)
         <div>
             <a class="alteraPagina" href="cadastrarLivros.php">Gerenciar Livros</a>
         </div>
+        <div>
+            <a class="nav-link" name="sairAdm" aria-current="page" href="loginAdm.php">Sair</a>
+        </div>
     </section>
     <section id="carrega">
         <h4>Bem vindo ao painel do administrador <?php echo $administrador['nome'];?></h4>

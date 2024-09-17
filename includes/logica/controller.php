@@ -102,6 +102,11 @@ if(isset($_POST['sair'])){
     session_destroy();
     header('location:../../login.php');
 }
+if(isset($_POST['sairAdm'])){
+    session_start();
+    session_destroy();
+    header('location:../../loginAdm.php');
+}
 ######################################## ADMINISTRADOR ##########################################
 #CADASTRAR ADMINISTRADOR
 if(isset($_POST['cadastrarAdm'])){

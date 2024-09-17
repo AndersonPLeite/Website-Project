@@ -23,12 +23,14 @@ foreach($administradores as $administrador){
             <p> <img src="imagens/<?php echo $administrador['foto_perfil'];?>" width='100px' height='100px'/></p>
             <p>Nome: <?php echo $administrador['nome']; ?></p>
             <p>Email: <?php echo $administrador['email']; ?></p>
-            
-            <form action="includes/logica/controller.php" method="post">
+           <div class="Adm">
+           <form action="includes/logica/controller.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $administrador['id']; ?>">
                 <button type="submit" class="alteraPagina" name="editarAdmin" value="<?php echo $administrador['id']; ?>"> Editar </button>
                 <button type="submit" name="deletarAdmin" value="<?php echo $administrador['id']; ?>" onclick = "return confirma_excluir()"> Deletar </button> 
             </form>
+           </div> 
+            
             <br><br>                                                          
         </section>
     <?php

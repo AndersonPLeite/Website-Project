@@ -54,7 +54,7 @@
                 <div class="card">
                   <img src="imagens/bearmarket.webp" class="card-img-top" alt="Mercado de baixa">
                   <div class="card-body">
-                    <h5 class="card-title">Mercados internacionais amanhecem em baixa após declaração de Putin</h5>
+                    <h5 class="card-title"><a href="acoes.php">Previsão para a Taxa Selic</a></h5>
                     <p class="card-text"></p>
                     <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                   </div>
