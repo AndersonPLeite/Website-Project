@@ -43,8 +43,7 @@
 .titulo{
     height: 7rem;
     padding: auto;
-    margin-top:4rem;
-    margin-left: 12rem;
+    margin-left: 13rem;
 }
 .titulo h1{
     margin-left: 5rem;
@@ -75,7 +74,7 @@ header{
     color: var(--bg-color-40);
 }
 #container-fluid a{
-    margin-right: 3em;
+    margin-left: 3.5rem;
     color: var(--bg-color-40);
 }
 #container-fluid a:hover{
@@ -118,19 +117,30 @@ header{
     color: var(--gradient);
 }
 #cards{
-    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
-.card img{
-    height: 24rem;
-    width: 25.5rem;
-}
-.card-group{
-    height: 5rem;
-    padding: 1rem;
-}
-.card-body{
+.card{
     background-color:var(--bg-color-73);
     color: var(--bg-color-40);
+    border: var(--bg-color-40);
+    border-radius: 5px; 
+    align-items: center;
+}
+.card img{
+    height: 18rem;
+    width: 24rem;
+    border-radius: 3px;
+    border: 1px solid var(--bg-color-40);
+}
+.card-body{
+    width: 100%;
+    color: var(--bg-color-40);
+   
+}
+.card-title{
+  align-items: center;
 }
 .text-body-secondary{
     color: var(--bg-color-40);
@@ -176,7 +186,12 @@ header{
     width: 100%;
     height: 100%;
 }
-/*====================================================== cryptos =========================================================================*/
+/*====================================================== AÇÕES ===========================================================================*/
+#ibovespa{
+    height: 100vh;
+}
+
+/*====================================================== CRYPTOS =========================================================================*/
 #crypto{
     height: 250vh;
     /*background-image: url(../imagens/Crypto_wallpaper.jpeg);*/
@@ -389,14 +404,6 @@ footer #logo{
     color: var(--bg-color-40);
     display: grid;
 }
-/*h1{
-    font-size: 4rem;
-    color: var(--gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-*/
 .menuAdmin{
     height: 4rem;
     background-color: var(--bg-color-10);

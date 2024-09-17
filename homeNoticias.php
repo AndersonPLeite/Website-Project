@@ -2,8 +2,8 @@
   include_once('includes/logica/functions.php');
   include_once('includes/logica/conecta.php');
 ?>
-<body>
-    <main id="home">
+<body id="home">
+    <main >
       <div class="container">
           <h1>Bolsacripto</h1>
       </div>
@@ -34,7 +34,29 @@
           </div>
         
         <div class="container" id="cards">
-            <div class="card-group" >
+                          <div class="card" style="width: 20rem;">
+                              <img src="imagens/bearmarket.webp" class="card-img-top" alt="taxa selic">
+                              <div class="card-body">
+                                <h5 class="card-title">Veja a previsão da Taxa Selic para os próximos anos.</h5>
+                                <a href="noticia.php" class="btn btn-success">Ver notícia</a>
+                          </div>
+                          </div>
+                        <div class="card" style="width: 20rem;">
+                          <img src="imagens/Krypto Kotek.jpeg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Bitcoin têm forte queda no 3° trimestre de 2024</h5>
+                            <a href="#" class="btn btn-success">Ver notícia</a>
+                          </div>
+                        </div>
+                        <div class="card" style="width: 20rem;">
+                          <img src="imagens/ibovespa.jpeg.webp" class="card-img-top" alt="ibovespa">
+                          <div class="card-body">
+                            <h5 class="card-title">Ibovespa alcança topo histórico.</h5>
+                            <a href="#" class="btn btn-success">Ver notícia</a>
+                          </div>
+                        
+</div>
+            <!--<div class="card-group" >
                 <div class="card">
                   <img src="imagens/ibovespa.jpeg.webp" class="card-img-top" alt="...">
                   <div class="card-body">
@@ -54,13 +76,13 @@
                 <div class="card">
                   <img src="imagens/bearmarket.webp" class="card-img-top" alt="Mercado de baixa">
                   <div class="card-body">
-                    <h5 class="card-title"><a href="acoes.php">Previsão para a Taxa Selic</a></h5>
+                    <h5 class="card-title"><a href="noticias.php">Previsão para a Taxa Selic</a></h5>
                     <p class="card-text"></p>
                     <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                   </div>
-                </div>
-              </div>
-      </div>
+                </div>-->
+        </div>
+       </div>
     </main>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
    <script type="text/javascript" src="js/scripts.js"></script>

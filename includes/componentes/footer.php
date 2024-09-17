@@ -46,6 +46,20 @@
             <a href="" class="footer-link">Carteira de investimentos</a>
           </li>
         </ul>
+        <ul class="footer-list">
+          <li>
+            <h3>Cursos</h3>
+          </li>
+          <li>
+            <a href="" class="footer-link">Renda fixa</a>
+          </li>
+          <li>
+            <a href="" class="footer-link">Day-trade</a>
+          </li>
+          <li>
+            <a href="" class="footer-link">BlockChain</a>
+          </li>
+        </ul>
       </div>
       <div id="footer-copyright">
         <p>&#169 2024 All rights reserved</p>

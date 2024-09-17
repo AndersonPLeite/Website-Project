@@ -1,5 +1,5 @@
 <?php
-   /*if(isset($_SESSION['msg']))
+   if(isset($_SESSION['msg']))
    { 
      echo $_SESSION['msg'];
      unset($_SESSION['msg']);
@@ -9,7 +9,7 @@
        header('location:login.php');
     
     }
-    */
+  
     include_once('includes/logica/conecta.php');
     include_once('includes/componentes/cabecalho.php');
     include_once('includes/logica/functions.php');

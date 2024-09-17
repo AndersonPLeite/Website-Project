@@ -1,7 +1,4 @@
 <?php
-    include_once('includes/logica/conecta.php');
-    include_once('includes/logica/functions.php');
-    include_once('includes/componentes/cabecalho.php');
 
     $noticias = selecionaNoticia($conexao,$array);
     foreach($noticias as $noticia){

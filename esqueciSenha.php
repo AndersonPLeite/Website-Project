@@ -6,13 +6,13 @@
     include_once('includes/componentes/cabecalho.php');
     include_once('includes/logica/functions.php');
     include_once('includes/logica/conecta.php');
-    /*session_start();
+    session_start();
     if(!isset($_SESSION['logado']))
     {
         header('location:login.php');
         
     }
-    */
+    
 ?>
 
 <title>Recuperar Senha</title>
@@ -26,4 +26,13 @@
                 <p>Didite seu email<label for="email"> </label><input class="input2" type="text" name="email" id="email"></p>
                 <p><button type="submit" class="btn btn-success" id='recuperar' name='recuperar' value="Recuperar"> Recuperar Senha </button>  </p>
             </form>
+            <div id='msg'>
+            </div>
+            <?php 
+                    if(isset($_SESSION['msg']))
+                    { 
+                        echo $_SESSION['msg'];
+                        unset($_SESSION['msg']);
+                    };
+               ?>
     </div>

@@ -5,6 +5,11 @@
         echo $_SESSION['msg'];
         unset($_SESSION['msg']);
       }
+       if(!isset($_SESSION['logado']))
+       {
+          header('location:login.php');
+       
+       }
       include_once('includes/logica/conecta.php');
       include_once('includes/componentes/cabecalho.php');
       require_once('includes/componentes/header.php');

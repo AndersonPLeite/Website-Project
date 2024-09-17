@@ -1,18 +1,22 @@
 <?php
-    /*session_start();
-    if(isset($_SESSION['msg']))
-    { 
-      echo $_SESSION['msg'];
-      unset($_SESSION['msg']);
-    }
-    */
+   session_start();
+     if(isset($_SESSION['msg']))
+     { 
+       echo $_SESSION['msg'];
+       unset($_SESSION['msg']);
+     }
+      if(!isset($_SESSION['logado']))
+      {
+         header('location:login.php');
+      
+      }
     include_once('includes/logica/conecta.php');
     include_once('includes/componentes/cabecalho.php');
     require_once('includes/componentes/header.php');
     include_once('includes/logica/functions.php');
   
 ?>
-  <body>
+  <body class="container-fluid">
   <main id="crypto">
     <section>
         <div class="titulo">
@@ -41,7 +45,7 @@
 
     </section>
     <section class="container" id="iframe">
-            <div >
+            <div>
                 <iframe width="840" height="515" border-radius="1rem" src="https://www.youtube.com/embed/_-DtYSm3FBw?si=OFOhUcwqytExh2DW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="video"></iframe>
             </div>
     </section>                                    
