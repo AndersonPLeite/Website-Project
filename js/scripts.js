@@ -205,6 +205,102 @@ function pesquisa(event) {
   })
 
 }
+const widgetConfigCripto = {
+  "symbols": [
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:B3SA3"
+    },
+    {
+      "description": "",
+      "proName": "NASDAQ:TSLA"
+    },
+    {
+      "description": "",
+      "proName": "NASDAQ:NVDA"
+    },
+    {
+      "description": "",
+      "proName": "NASDAQ:AMZN"
+    },
+    {
+      "description": "",
+      "proName": "NASDAQ:AMD"
+    },
+    {
+      "description": "",
+      "proName": "NASDAQ:MSFT"
+    },
+    {
+      "description": "",
+      "proName": "NASDAQ:GOOGL"
+    },
+    {
+      "description": "",
+      "proName": "BINANCE:BTCUSDT"
+    },
+    {
+      "description": "",
+      "proName": "COINBASE:SOLUSD"
+    },
+    {
+      "description": "",
+      "proName": "BINANCE:RUNEUSDT"
+    },
+    {
+      "description": "",
+      "proName": "BINANCE:UNIUSDT"
+    },
+    {
+      "description": "",
+      "proName": "BINANCE:NEARUSDT"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:MRFG3"
+    },
+    {
+      "description": "",
+      "proName": "BMFBOVESPA:BRSR6"
+    }
+  ],
+  "showSymbolLogo": true,
+  "isTransparent": false,
+  "displayMode": "adaptive",
+  "colorTheme": "dark",
+  "locale": "br"
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  var tradingviewwidgetSticker = document.querySelector('.tradingviewCripto')
+      if(tradingviewwidgetSticker){
+              const widgetConfigSticker= JSON.stringify(widgetConfigCripto);
+              
+              const script = document.createElement("script");
+              script.type = "text/javascript";
+              script.src = "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js";
+              script.async = true;
+              
+              
+              script.text = widgetConfigSticker;
+              
+              
+              const widgetContainerCripto = document.querySelector(".tradingviewCripto");
+              widgetContainerCripto.appendChild(script);
+      }else{
+              console.error('Element with class "tradingview-container-Ibov" not found.');
+  }
+  
+})
+
 const widgetConfigIbov = {
     "width": "950",
     "height": "600",

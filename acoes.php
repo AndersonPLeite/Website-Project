@@ -7,7 +7,7 @@
 <body>
     <main>
         <section>
-            <div>
+            <div class="titulo">
                 <h1>Ibovespa hoje</h1>
             </div>
             <div>

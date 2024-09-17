@@ -25,8 +25,8 @@
     font-family: "Noto Sans", sans-serif;
 }
  body{
-    background-color: var(--bg-color-7);
-    height: 150vh;
+    height: 250vh;
+    background-color: var(--bg-color-73);
  }
  h1, h2{
     color: var(--bg-color-40);
@@ -39,6 +39,14 @@
  }
 .error { 
     color: red; 
+}
+.titulo{
+    height: 4rem;
+    padding: auto;
+
+}
+.titulo h1{
+    margin-left: 5rem;
 }
 /* ================================================ HEADER ======================================================================== */
 header{
@@ -126,8 +134,8 @@ header{
     color: var(--bg-color-40);
 }
 #slider{
-    height: 70%;
-    width: 68%;
+    height: 90%;
+    width: 100%;
     border-radius: 0.5rem;
     border: 1px solid var(--bg-color-40);
     box-shadow: 1px -3px 5px var(--bg-color-40);
@@ -152,12 +160,14 @@ header{
 /*====================================================== Notícias ========================================================================*/
 #news{
     height: 200vh;
+    background-image: url(../imagens/buildings.jpg);
 }
 .noticias{
     display: flex;
     width: 100%;
     height: 100% ;
     padding: 2rem;
+    
 }
 .noticia1{
     
@@ -184,13 +194,15 @@ header{
         height: 80%;
         width: 100%;
         margin: auto;
+        border: 1px solid var(--bg-color-30);
     }
 
 #chart{
-    height: 65rem;
+    height: 55rem;
     width: 70rem;
     margin: auto;
-    padding-top: 150px;
+    border: 1px solid var(--bg-color-30);
+    padding-top: 50px;
     border-radius: 10px;
 }
 
@@ -458,5 +470,15 @@ section{
 .sliderLivros img{
     height: 180px;
     margin: 0 40px;
+}
+.download-link{
+    font-size: 34px;
+    background-color: red;
+    color: var(--bg-color-40);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid red;
+    transition: all 0.27s ease-in-out;
 }
 /*======================================================================= Login ============================================================== */

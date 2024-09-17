@@ -217,7 +217,7 @@ if(isset($_POST['editar'])){
     }
 
 #EMAIL PROMOCIONAL
-if (isset($_POST['ENVIAR'])) 
+if (isset($_POST['enviarEmailPromo'])) 
 {
 $mensagem = $_POST['mensagem'];
 
@@ -250,9 +250,9 @@ $assunto="Seja Bem vindo";
         $mail->setFrom('siteprojetotsi@gmail.com','Adm Site');
         $pessoas=listarPessoa($conexao);
         foreach($pessoas as $pessoa){
-            $email = $pessoa['email'];
             $nome = $pessoa['nome'];
-            $mail->addAddress($email, $nome );
+            $email = $pessoa['email'];
+            $mail->addAddress($nome, $email );
         }
 
         
@@ -270,7 +270,7 @@ $assunto="Seja Bem vindo";
         $mail->send();
     
        
-        header('Location:../../index.php');
+        header('Location:../../painelAdmin.php');
 }
 #RECUPERAR SENHA
  if(isset($_POST['recuperar'])){
@@ -368,8 +368,9 @@ if(isset($_POST['pesquisaNoticia'])){
     $titulo = $_POST['titulo'];
     $array=array("%".$titulo."%");
     $noticias=selecionaNoticia($conexao, $array);
-    require_once('../../mostrarProduto.php');
-    }
+    require_once('../../noticiaPesquisada.php');
+}
+
 
 #################################################### PRODUTO ################################################
 #CADASTRAR CATEGORIA

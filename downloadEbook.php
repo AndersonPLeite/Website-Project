@@ -28,7 +28,7 @@
                 <p>Neste clássico da literatura dos investimentos Graham enfatiza que a inteligência do investidor não está relacionada ao QI ou notas escolares.
                 Ser um investidor inteligente significa ser paciente, disciplinado e ávido por aprendizado. </p>
                 <p>Faça o download deste livro gratuitamente clicando no botão abaixo</p>
-                <button type="button" class="btn btn-danger">Download</button>
+                <a class="btn btn-danger" href="ebooks/BitcoinAMoedanaEraDigital.pdf" download>Download</a>
             </div>
         </div>
   </section>

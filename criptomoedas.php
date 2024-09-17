@@ -14,7 +14,7 @@
   <body>
   <main id="crypto">
     <section>
-        <div class="container">
+        <div class="titulo">
             <h1>Criptomoedas</h1>
         </div>
     </section>
@@ -41,14 +41,8 @@
     </section>
     <section class="container" id="iframe">
             <div >
-              <iframe width="840" height="515" border-radius="1rem" src="https://www.youtube.com/embed/_-DtYSm3FBw?si=OFOhUcwqytExh2DW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="video"></iframe>
+                <iframe width="840" height="515" border-radius="1rem" src="https://www.youtube.com/embed/_-DtYSm3FBw?si=OFOhUcwqytExh2DW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="video"></iframe>
             </div>
-            <aside >
-               <div id="aside">
-                 <h3>Notícias</h3>
-               </div>
-                
-            </aside>
     </section>                                    
   </main>
   <?php

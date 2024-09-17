@@ -46,19 +46,6 @@
             <a href="" class="footer-link">Carteira de investimentos</a>
           </li>
         </ul>
-        <div id="footer-subscribe">
-          <h3>Newsletter</h3>
-          <p>
-            Inscreva-se na nossa newsletter para receber as mais novas notícias do mercado financeiro.
-          </p>
-          <div id="input-group">
-            <input type="email" id="email">
-            <button>
-              <i class="fa-regular fa-envelope"></i>
-            </button>
-          </div>
-          
-        </div>
       </div>
       <div id="footer-copyright">
         <p>&#169 2024 All rights reserved</p>

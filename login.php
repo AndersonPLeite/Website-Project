@@ -50,7 +50,7 @@
                     };
                ?>
               <div class="links">
-              <p><a href="esqueciSenha.php">Esqueci a senha</a></p>
+              <p><a href="esqueciSenha.php">Esqueceu a senha</a></p>
         
               </div>
         </div>

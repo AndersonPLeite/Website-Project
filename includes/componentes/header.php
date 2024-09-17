@@ -10,7 +10,7 @@
               
                 <div class="container-fluid" id="container-fluid">
                     
-                  <a class="navbar-brand alteraPagina" href="noticia.php">Notícias</a>
+                  <a class="navbar-brand" href="noticia.php">Notícias</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -22,107 +22,24 @@
                       <li class="nav-item">
                         <a class="nav-link" href="criptomoedas.php">Criptomoedas</a>
                       </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Categorias
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item"  href="criptomoedas.php">Criptomoedas</a></li>
-                          <li><a class="dropdown-item alteraPagina" href="noticias.php">Renda Fixa</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item alteraPagina" href="biblioteca.php">Livros</a></li>
-                        </ul>
+                      <li class="nav-item">
+                        <a class="nav-link" href="biblioteca.php">E-books</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" name="sair" aria-current="page" href="login.php">Sair</a>
                       </li>
                     </ul>
                     <form class="d-flex" id="formulario" role="search" method="POST">
-                      <input class="form-control me-2" type="search" name="pesquisaNoticia" id="inputPesquisa" onkeyup="pesquisa(event)" aria-label="Pesquisar">
-                      <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                      <input class="form-control me-2" type="search" name="pesquisaNoticia" id="pesquisaNoticia" onsubmit="pesquisa(event)" aria-label="Pesquisar">
+                      <button class="btn btn-outline-success" name="pesquisaNoticia" type="submit">Pesquisar</button>
                     </form>
                   </div>
                 </div>
               </nav>
       </div>
-      <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <div class="tradingview-widget-copyright"><a href="https://br.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text"></span></a></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async/>
-        {
-        "symbols": [
-          {
-            "proName": "BITSTAMP:BTCUSD",
-            "title": "Bitcoin"
-          },
-          {
-            "proName": "BITSTAMP:ETHUSD",
-            "title": "Ethereum"
-          },
-          {
-            "description": "",
-            "proName": "BMFBOVESPA:B3SA3"
-          },
-          {
-            "description": "",
-            "proName": "NASDAQ:TSLA"
-          },
-          {
-            "description": "",
-            "proName": "NASDAQ:NVDA"
-          },
-          {
-            "description": "",
-            "proName": "NASDAQ:AMZN"
-          },
-          {
-            "description": "",
-            "proName": "NASDAQ:AMD"
-          },
-          {
-            "description": "",
-            "proName": "NASDAQ:MSFT"
-          },
-          {
-            "description": "",
-            "proName": "NASDAQ:GOOGL"
-          },
-          {
-            "description": "",
-            "proName": "BINANCE:BTCUSDT"
-          },
-          {
-            "description": "",
-            "proName": "COINBASE:SOLUSD"
-          },
-          {
-            "description": "",
-            "proName": "BINANCE:RUNEUSDT"
-          },
-          {
-            "description": "",
-            "proName": "BINANCE:UNIUSDT"
-          },
-          {
-            "description": "",
-            "proName": "BINANCE:NEARUSDT"
-          },
-          {
-            "description": "",
-            "proName": "BMFBOVESPA:MRFG3"
-          },
-          {
-            "description": "",
-            "proName": "BMFBOVESPA:BRSR6"
-          }
-        ],
-        "showSymbolLogo": true,
-        "isTransparent": false,
-        "displayMode": "adaptive",
-        "colorTheme": "dark",
-        "locale": "br"
-      }
-        </script>
+      <div>
+            <div class="tradingviewCripto"></div>   
+      </div>
       </div>
       <script type="text/javascript" src="js/scripts.js"></script>
     </header>

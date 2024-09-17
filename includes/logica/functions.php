@@ -405,11 +405,11 @@ function pesquisarPessoaEmail($conexao,$array){
 
      function selecionaNoticia($query, $array){
         try{
-            $query = $array->prepare("SELECT titulo FROM noticias WHERE titulo LIKE ?");
+            $query = $array->prepare("SELECT * FROM noticias WHERE titulo LIKE ?");
             if($query->execute($array)){
-                $titulos = $query->fetchAll();
-                if($titulos){
-                    return $titulos;
+                $noticias = $query->fetch();
+                if($noticias){
+                    return $noticias;
                 }else
                 {
                     return false;
@@ -422,6 +422,6 @@ function pesquisarPessoaEmail($conexao,$array){
                 echo 'Error: ' . $e->getMessage();
           }  
         }
-           
+
    ?>
 
