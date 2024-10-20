@@ -1,5 +1,4 @@
 <?php
-include_once('includes/componentes/cabecalho.php');
 include_once('includes/logica/functions.php');
 include_once('includes/logica/conecta.php');
 session_start();
@@ -15,7 +14,7 @@ if(!isset($_SESSION['logado']))
 }
 
 ?>
-   
+   <link rel="stylesheet" href="css/styleadmin.css">
     </head>
          <h3> Listagem de Usuários </h3>
     <?php
