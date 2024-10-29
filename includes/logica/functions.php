@@ -35,6 +35,15 @@
             echo 'Error: ' . $e->getMessage();
         }
     }
+    function alterarAdmin($conexao, $array){
+        try {
+            $query = $conexao->prepare("update administradores set nome= ?, email = ?, senha= ?, foto_perfil where id=? and status=true");
+            $resultado = $query->execute($array);             
+            return $resultado;
+        }catch(PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
 
     function alterarPessoaPerfil($conexao, $array){
         try {
@@ -61,12 +70,34 @@
 
     }
  
+    function deletarAdministrador($conexao, $array){
+        try {
+            $query = $conexao->prepare("delete from administradores where id = ?");
+            $resultado = $query->execute($array);   
+             return $resultado;
+        }catch(PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+    }
+ 
     function listarPessoa($conexao){
       try {
         $query = $conexao->prepare("SELECT * FROM pessoa where status=true");      
         $query->execute();
         $pessoas = $query->fetchAll();
         return $pessoas;
+      }catch(PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+      }  
+
+    }
+    function listarAdmin($conexao){
+      try {
+        $query = $conexao->prepare("SELECT * FROM administradores where status=true");      
+        $query->execute();
+        $administradores = $query->fetchAll();
+        return $administradores;
       }catch(PDOException $e) {
             echo 'Error: ' . $e->getMessage();
       }  
@@ -79,6 +110,20 @@
         if($query->execute($array)){
             $pessoa = $query->fetch(); //coloca os dados num array $usuario
             return $pessoa;
+        }
+        else{
+            return false;
+        }
+         }catch(PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+      }  
+    }
+     function buscarAdmin($conexao,$array){
+        try {
+        $query = $conexao->prepare("select * from administradores where id=?");
+        if($query->execute($array)){
+            $administrador = $query->fetch(); //coloca os dados num array $usuario
+            return $administrador;
         }
         else{
             return false;
@@ -277,7 +322,7 @@ function pesquisarPessoaEmail($conexao,$array){
  
      function listarProduto($conexao){
          try {
-           $query = $conexao->prepare("SELECT * FROM produto");      
+           $query = $conexao->prepare("SELECT * FROM produtos");      
            $query->execute();
            $produtos = $query->fetchAll();
            return $produtos;
@@ -332,4 +377,51 @@ function pesquisarPessoaEmail($conexao,$array){
              echo 'Error: ' . $e->getMessage();
        }  
      }
+
+     function inserirNoticia($conexao,$array){
+        try {
+            $query = $conexao->prepare("insert into noticias(titulo, conteudo,data_publicacao, fonte, categoria) values (?, ?, ?, ?, ?)");
+
+            $resultado = $query->execute($array);
+            var_dump($resultado);
+            return $resultado;
+        }catch(PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+
+    }
+
+
+     function listarNoticia($conexao){
+            try{
+                $query = $conexao->prepare("SELECT * FROM noticias");
+                $query->execute();
+                $noticias = $query->fetchAll();
+                return $noticias;
+            }catch(PDOException $e){
+                echo 'Error: '.$e->getMessage();
+            }
+     }
+
+     function selecionaNoticia($query, $array){
+        try{
+            $query = $array->prepare("SELECT * FROM noticias WHERE titulo LIKE ?");
+            if($query->execute($array)){
+                $noticias = $query->fetch();
+                if($noticias){
+                    return $noticias;
+                }else
+                {
+                    return false;
+                }
+            }
+            else{
+                return false;
+            }
+             }catch(PDOException $e) {
+                echo 'Error: ' . $e->getMessage();
+          }  
+        }
+
    ?>
+

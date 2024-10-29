@@ -2,7 +2,7 @@
 
     include_once('includes/componentes/cabecalho.php');
     include_once('includes/componentes/header.php');
-    include_once('includes/logica/funcoes_pessoa.php');
+    include_once('includes/logica/functions.php');
     include_once('includes/logica/conecta.php');
     
 if( empty($_GET['utilizador']) || empty($_GET['confirmacao']) )
@@ -22,7 +22,7 @@ if( empty($_GET['utilizador']) || empty($_GET['confirmacao']) )
      {
  ?>   
  
-        <form action="includes/logica/logica_pessoa.php" method="post">
+        <form action="includes/logica/controller.php" method="post">
             <input type="hidden" name="email" value="<?php echo $utilizador ?>" />
            Nova Senha: <input type="password" name="novasenha" />
             <input type="submit" name="alterarsenha" value="Alterar Senha" />

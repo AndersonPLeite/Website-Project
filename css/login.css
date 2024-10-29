@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(45deg,rgb(8, 7, 18),#131722);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150vh ;
+}
+
+h2{
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    margin: 20px;
+}
+.container{
+    width: 500px;
+    height: 590px;
+    background-color: #171a24;
+    border-radius: 5%;
+    box-shadow: 1px 2px 10px #000, 3px 6px 20px #000 ;
+    padding: 25px 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 25rem;
+}
+img{
+    height: 150px;
+    width: 150px;
+    margin-bottom: 2rem;
+}
+input{
+    width: 100%;
+    height: 48px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+.input2{
+    width: 30rem;
+    height: 48px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+.input-field{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(15px);
+}
+
+input:focus{
+    border-bottom: 2px solid #26a96a;
+    box-shadow: 0 1px 0 0 #26a96a;
+}
+.center{
+    display: flex;
+    justify-content: space-around;
+    height: 4rem;
+    width: 100%;
+    margin-top: 7rem;
+    
+}
+a ,button{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.container3{
+    width: 500px;
+    height: 400px;
+    background-color: #171a24;
+    border-radius: 5%;
+    box-shadow: 1px 2px 10px #000, 3px 6px 20px #000 ;
+    padding: 15px 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 10rem;
+}
+
+#logo2{
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}
+
+#forgotPass{
+    height: 100vh;
+}

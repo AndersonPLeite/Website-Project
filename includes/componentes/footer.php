@@ -46,21 +46,24 @@
             <a href="" class="footer-link">Carteira de investimentos</a>
           </li>
         </ul>
-        <div id="footer-subscribe">
-          <h3>Newsletter</h3>
-          <p>
-            Inscreva-se na nossa newsletter para receber as mais novas notícias do mercado financeiro.
-          </p>
-          <div id="input-group">
-            <input type="email" id="email">
-            <button>
-              <i class="fa-regular fa-envelope"></i>
-            </button>
-          </div>
-          
-        </div>
+        <ul class="footer-list">
+          <li>
+            <h3>Cursos</h3>
+          </li>
+          <li>
+            <a href="" class="footer-link">Renda fixa</a>
+          </li>
+          <li>
+            <a href="" class="footer-link">Day-trade</a>
+          </li>
+          <li>
+            <a href="" class="footer-link">BlockChain</a>
+          </li>
+        </ul>
       </div>
       <div id="footer-copyright">
         <p>&#169 2024 All rights reserved</p>
       </div>
     </footer>
+    <script type="text/javascript" src="js/scripts.js"></script>
+</html>

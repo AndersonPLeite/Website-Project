@@ -1,18 +1,20 @@
 <?php
-   /*if(isset($_SESSION['msg']))
-   { 
-     echo $_SESSION['msg'];
-     unset($_SESSION['msg']);
-   }
-    if(!isset($_SESSION['logado']))
-    {
-       header('location:login.php');
-    
-    }
-    */
-    require('includes/logica/conecta.php');
-    require('includes/componentes/cabecalho.php');
-?>
+      session_start();
+      if(isset($_SESSION['msg']))
+      { 
+        echo $_SESSION['msg'];
+        unset($_SESSION['msg']);
+      }
+       if(!isset($_SESSION['logado']))
+       {
+          header('location:login.php');
+       
+       }
+      include_once('includes/logica/conecta.php');
+      include_once('includes/componentes/cabecalho.php');
+      require_once('includes/componentes/header.php');
+      include_once('includes/logica/functions.php');
+  ?>
 <body class="bbtc">
   <main>
   <main class="bbtc">
@@ -33,42 +35,31 @@
                       E-books
                     </label>
                   </div>
-                  <form method="post" action="buscar.php">
-                    <label for="search">Pesquisar:</label>
-                    <input type="text" id="search" name="search" placeholder="Pesquisar">
-                    <input type="submit" value="Buscar">
-                  </form>
+                  <div>
+                    <form method="post" action="buscar.php" class="d-flexB" role="search">
+                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Pesquisar">
+                          <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                    </form>
+                  </div>
+                  
             </section>
         </div>
         <div>
             <section id="livros">
-                <div>
-                   <img src="imagens/modelo_Capa-3D_BITCOIM.png" alt="o padrão bitcoin" id="imgLivro">
-                   <button type="button" class="btn btn-primary">Ver livro</button> 
-                </div>
-                <div>
-                    <img src="imagens/modelo_Capa-3D_BITCOIM.png" alt="A filosofia do bitcoin" id="imgLivro">
-                    <button type="button" class="btn btn-primary">Ver livro</button>
-                </div>
-                <div>
-                  <img src="imagens/oIIntli.png" alt="O investidor Inteligente" id="imgLivro3">
-                  <button type="button" class="btn btn-primary">Ver livro</button>
-
-                </div>
-                <div>
-                  <img src="imagens/oIIntli.png" alt="Investindo em ações no longo prazo" id="imgLivro2">
-                  <button type="button" class="btn btn-primary">Ver livro</button>
-                </div>
-                <div>
-                  <img src="imagens/oIIntli.png" alt="O investidor Inteligente" id="imgLivro2">
-                  <button type="button" class="btn btn-primary">Ver livro</button>
-                </div>
-                <div>
-                  <img src="imagens/oIIntli.png" alt="O investidor Inteligente" id="imgLivro2">
-                  <button type="button" class="btn btn-primary">Ver livro</button>
-                </div>
+                  <div>
+                      <img src="imagens/oIIntli.png" alt="O investidor Inteligente" id="imgLivro3">
+                      <button type="button" class="btn btn-success" id="imgLivro3"><a  href="downloadEbook.php">Ver livro</a></button>
+                  </div>
+                  <div>
+                      <img src="imagens/oIIntli.png" alt="O investidor Inteligente" id="imgLivro3">
+                      <button type="button" class="btn btn-success" id="imgLivro3"><a  href="downloadEbook.php">Ver livro</a></button>
+                  </div>
             </section>
         </div>
     </main>
     <script type="text/javascript" src="js/scripts.js"></script>
+    <?php
+    include_once('includes/componentes/footer.php');
+  ?>
+  
 </body>

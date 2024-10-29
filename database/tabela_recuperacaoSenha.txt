@@ -1,0 +1,5 @@
+CREATE TABLE recuperacao (
+  utilizador  varchar(255) NOT NULL,
+  confirmacao varchar(40) NOT NULL,
+  KEY(utilizador, confirmacao)
+)
