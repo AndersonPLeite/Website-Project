@@ -2,20 +2,22 @@
 ## Website de notícias sobre o mercado financeiro.
 ![Bolsacripto](./imagens/logo-BC-rmvBG.png)
 
-
+<h2>Tecnologias utilizadas</h2>  
 <div style="display: inline_block"><br/>
   <img  height="100px" width="100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" />
   <img height="100px" width="100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" />
   <img  height="100px" width="100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
   <img height="100px" width="100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" />
   <img  height="100px" width="100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+  <img height="100px" width="100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
+          
 </div>
           
 ## Pré-requisitos
 <h2>phpMyAdmin</h2>
 https://www.phpmyadmin.net/downloads/
 
-<h2>Tecnologias utilizadas</h2>  
+
 
 <p>Crie um banco de dados no phpMyAdmin</p>
 <p>CREATE DATABASE  "db_name";
