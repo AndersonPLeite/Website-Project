@@ -14,7 +14,8 @@
 ## Pré-requisitos
 <h2>phpMyAdmin</h2>
 <a>https://www.phpmyadmin.net/downloads/</a>
-## Tecnologias utilizadas  
+
+<h2>Tecnologias utilizadas</h2>  
 
 <p>Crie um banco de dados no phpMyAdmin</p>
 <p>CREATE DATABASE  "db_name";
@@ -22,16 +23,6 @@ USE "db_name";
 </p>
 <p>
 Crie as demais tabelas usando sql do diretório "database"
-CREATE TABLE pessoa (
-codpessoa SERIAL PRIMARY KEY,
-nome VARCHAR(250) NOT NULL,
-email VARCHAR(250) UNIQUE NOT NULL,
-cpf VARCHAR(11)NOT NULL,
-senha VARCHAR(250) NOT NULL,
-imagem VARCHAR(250) DEFAULT 'foto.png' NOT NULL,
-status BOOLEAN DEFAULT TRUE,
-reg_date date NOT NULL default CURRENT_DATE
-);
 </p>        
           
 Link to project documentation on figma.
