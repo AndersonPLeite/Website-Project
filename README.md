@@ -13,7 +13,7 @@
           
 ## Pré-requisitos
 <h2>phpMyAdmin</h2>
-<a>https://www.phpmyadmin.net/downloads/</a>
+https://www.phpmyadmin.net/downloads/
 
 <h2>Tecnologias utilizadas</h2>  
 
